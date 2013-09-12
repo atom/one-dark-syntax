@@ -1,7 +1,7 @@
 {
   "name": "atom-light-syntax",
   "theme": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Default light theme for syntax",
   "repository": {
     "type": "git",
