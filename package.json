@@ -1,0 +1,19 @@
+{
+  "name": "atom-dark-syntax",
+  "theme": true,
+  "version": "0.0.0",
+  "description": "Default dark theme for syntax",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atom/atom-dark-syntax.git"
+  },
+  "bugs": {
+    "url": "https://github.com/atom/atom-dark-syntax/issues"
+  },
+  "engines": {
+    "atom": ">26.0"
+  },
+  "publishConfig": {
+    "registry": "https://atom.iriscouch.com/registry/_design/app/_rewrite"
+  }
+}
