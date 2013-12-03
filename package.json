@@ -3,17 +3,8 @@
   "theme": true,
   "version": "0.6.0",
   "description": "Default light theme for syntax",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/atom/atom-light-syntax.git"
-  },
-  "bugs": {
-    "url": "https://github.com/atom/atom-light-syntax/issues"
-  },
+  "repository": "https://github.com/atom/atom-light-syntax",
   "engines": {
     "atom": ">26.0"
-  },
-  "publishConfig": {
-    "registry": "https://atom.cloudant.com/registry/_design/app/_rewrite"
   }
 }
