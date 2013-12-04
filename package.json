@@ -5,6 +5,6 @@
   "description": "Default light theme for syntax",
   "repository": "https://github.com/atom/atom-light-syntax",
   "engines": {
-    "atom": ">26.0"
+    "atom": ">0.40.0"
   }
 }
