@@ -1,6 +1,6 @@
 {
   "name": "atom-dark-syntax",
-  "theme": true,
+  "theme": "syntax",
   "version": "0.12.0",
   "description": "Default dark theme for syntax",
   "repository": "https://github.com/atom/atom-dark-syntax",
