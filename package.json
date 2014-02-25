@@ -4,6 +4,7 @@
   "version": "0.13.0",
   "description": "Default light theme for syntax",
   "repository": "https://github.com/atom/atom-light-syntax",
+  "license": "MIT",
   "engines": {
     "atom": ">0.40.0"
   }
