@@ -6,6 +6,6 @@
   "repository": "https://github.com/atom/atom-dark-syntax",
   "license": "MIT",
   "engines": {
-    "atom": ">26.0"
+    "atom": ">0.50.0"
   }
 }
