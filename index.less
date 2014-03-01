@@ -1,17 +1,27 @@
+@import 'syntax-variables';
+
 .editor {
   &,
   .gutter {
-    background-color: #FFFFFF;
-    color: #555;
+    background-color: @syntax-background-color;
+    color: @syntax-text-color;
   }
 
-  .invisible-character,
+  .invisible-character {
+    color: @syntax-invisible-character-color;
+  }
+
   .indent-guide {
-    color: rgba(85, 85, 85, .2);
+    color: @syntax-indent-guide-color;
   }
 
   .wrap-guide {
-    background-color: rgba(85, 85, 85, .1);
+    background-color: @syntax-wrap-guide-color;
+  }
+
+  .gutter{
+    color: @syntax-gutter-text-color;
+    background: @syntax-gutter-background-color;
   }
 
   .gutter .line-number.folded,
@@ -30,16 +40,16 @@
 
   &.is-focused {
     .cursor {
-      border-color: #000;
+      border-color: @syntax-cursor-color;
     }
 
     .selection .region {
-      background-color: #afc4da;
+      background-color: @syntax-selection-color;
     }
 
     .line-number.cursor-line-no-selection,
     .line.cursor-line {
-      background-color: rgba(255, 255, 134, 0.34);
+      background-color: @syntax-gutter-background-color-selected;
     }
   }
 
@@ -246,11 +256,10 @@
 
   .search-results .marker .region {
     background-color: transparent;
-    border: 1px solid #333;
+    border: 1px solid @syntax-result-marker-color;
   }
   .search-results .marker.current-result .region {
-    border: 1px solid #0b0;
-    box-shadow: 0 0 5px #0b0;
+    border: 1px solid @syntax-result-marker-color-selected;
   }
 }
 
