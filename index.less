@@ -1,16 +1,31 @@
+@import 'syntax-variables';
+
 .editor-colors {
-  background-color: #1d1f21;
-  color: #c5c8c6;
+  background-color: @syntax-background-color;
+  color: @syntax-text-color;
 }
 
 .editor {
-  .invisible-character,
+  .invisible-character {
+    color: @syntax-invisible-character-color;
+  }
+
   .indent-guide {
-    color: rgba(197, 200, 198, .2);
+    color: @syntax-indent-guide-color;
   }
 
   .wrap-guide {
-    background-color: rgba(197, 200, 198, .1);
+    background-color: @syntax-wrap-guide-color;
+  }
+
+  .gutter {
+    background-color: @syntax-gutter-background-color;
+  }
+  .gutter .cursor-line {
+    background-color: @syntax-gutter-background-color-selected;
+  }
+  .line-number.cursor-line-no-selection {
+    background-color: @syntax-gutter-background-color-selected;
   }
 
   .gutter .line-number.folded,
@@ -20,19 +35,15 @@
   }
 
   .invisible {
-    color: #c5c8c6;
+    color: @syntax-text-color;
   }
 
   .cursor {
-    border-color: #FFFFFF;
+    border-color: @syntax-cursor-color;
   }
 
   .selection .region {
-    background-color: #444444;
-  }
-
-  .line-number.cursor-line-no-selection {
-    background-color: rgba(255, 255, 255, 0.14);
+    background-color: @syntax-selection-color;
   }
 
   // Markdown Styles
@@ -92,11 +103,11 @@
 
   .search-results .marker .region {
     background-color: transparent;
-    border: 1px solid #ddd;
+    border: 1px solid @syntax-result-marker-color;
   }
 
   .search-results .marker.current-result .region {
-    border: 1px solid #0d0;
+    border: 1px solid @syntax-result-marker-color-selected;
   }
 }
 
