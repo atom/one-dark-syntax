@@ -89,11 +89,13 @@
     }
   }
 
-  .search-results .marker .region {
+  .search-results .marker .region,
+  .find-result .region {
     background-color: transparent;
     border: 1px solid @syntax-result-marker-color;
   }
-  .search-results .marker.current-result .region {
+  .search-results .marker.current-result .region,
+  .current-result .region {
     border: 1px solid @syntax-result-marker-color-selected;
   }
 }
