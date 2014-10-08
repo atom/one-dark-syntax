@@ -1,8 +1,8 @@
 @import 'syntax-variables';
 
 .editor-colors {
-  background-color: @syntax-background-color;
   color: @syntax-text-color;
+  background-color: @syntax-background-color;
 }
 
 .editor {
@@ -21,17 +21,28 @@
   .gutter {
     background-color: @syntax-gutter-background-color;
   }
-  .gutter .cursor-line {
-    background-color: @syntax-gutter-background-color-selected;
-  }
-  .line-number.cursor-line-no-selection {
-    background-color: @syntax-gutter-background-color-selected;
-  }
 
   .gutter .line-number.folded,
   .gutter .line-number:after,
   .fold-marker:after {
-    color: #fba0e3;
+    opacity: .25;
+  }
+
+  .line-number {
+    color: @syntax-gutter-text-color;
+  }
+
+  .line-number.cursor-line {
+    color: @syntax-gutter-text-color-selected;
+    background-color: @syntax-gutter-background-color-selected;
+  }
+
+  .line-number.cursor-line-no-selection {
+    background-color: transparent;
+  }
+
+  .line-number .icon-right {
+    color: @syntax-text-color;
   }
 
   .invisible {

@@ -5,6 +5,7 @@
 
 @syntax-hue: @base-hue;
 @syntax-base-color: @level-3-color;
+@syntax-guide-color: fade(@syntax-text-color, 15%);
 
 
 // This defines all syntax variables that syntax themes must implement when they
@@ -12,26 +13,26 @@
 
 // General colors
 @syntax-text-color: hsl(@syntax-hue, 16%, 72%);
-@syntax-cursor-color: hsl(@syntax-hue, 100%, 60%);
+@syntax-cursor-color: hsl(@syntax-hue, 100%, 66%);
 @syntax-background-color: @syntax-base-color;
-@syntax-selection-color: lighten(@syntax-background-color, 6%);
-@syntax-selection-flash-color: #eee;
+@syntax-selection-color: lighten(@syntax-background-color, 10%);
+@syntax-selection-flash-color: @syntax-text-color;
 
 // Guide colors
-@syntax-wrap-guide-color: rgba(197, 200, 198, .1);
-@syntax-indent-guide-color: rgba(197, 200, 198, .2);
-@syntax-invisible-character-color: rgba(197, 200, 198, .2);
+@syntax-wrap-guide-color: @syntax-guide-color;
+@syntax-indent-guide-color: @syntax-guide-color;
+@syntax-invisible-character-color: @syntax-guide-color;
 
 // For find and replace markers
-@syntax-result-marker-color: #888;
-@syntax-result-marker-color-selected: white;
+@syntax-result-marker-color: @syntax-text-color;
+@syntax-result-marker-color-selected: #fff;
 
 // Gutter colors
-@syntax-gutter-text-color: green;
-@syntax-gutter-text-color-selected: red;
+@syntax-gutter-text-color: darken(@syntax-text-color, 25%);
+@syntax-gutter-text-color-selected: @syntax-text-color;
 
-@syntax-gutter-background-color: darken(@syntax-background-color, 2%);
-@syntax-gutter-background-color-selected: transparent;
+@syntax-gutter-background-color: lighten(@syntax-background-color, 2%);
+@syntax-gutter-background-color-selected: lighten(@syntax-background-color, 4%);
 
 // For git diff info. i.e. in the gutter
 @syntax-color-renamed: #96CBFE;
