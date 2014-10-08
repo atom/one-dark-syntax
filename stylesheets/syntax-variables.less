@@ -1,8 +1,3 @@
-@base-hue: 220; // Fallback
-@level-3-color: hsl(@base-hue, 8%, 14%); // Fallback
-
-@import "ui-variables";
-
 @syntax-hue: @base-hue;
 @syntax-base-color: @level-3-color;
 @syntax-guide-color: fade(@syntax-text-color, 15%);
@@ -39,3 +34,9 @@
 @syntax-color-added: #A8FF60;
 @syntax-color-modified: #E9C062;
 @syntax-color-removed: #CC6666;
+
+
+// Fallback vars
+// This syntax theme uses vars from "Mod Atom Dark" UI theme
+@base-hue: 220;
+@level-3-color: hsl(220, 12%, 14%);
