@@ -1,5 +1,10 @@
 // Default language syntax highlighting
 
+// TODO: Explore more, this is just a first POC
+@syntax-lang-accent: hsl(@base-hue,66%,66%);
+@syntax-lang-var: hsl(@base-hue,100%,80%);
+
+
 .bracket-matcher {
   border-bottom: 1px solid #f8de7e;
   margin-top: -1px;
@@ -24,10 +29,10 @@
 }
 
 .keyword {
-  color: #96CBFE;
+  color: @syntax-lang-accent;
 
   &.control {
-    color: #96CBFE;
+    color: @syntax-lang-accent;
   }
 
   &.operator {
@@ -39,7 +44,7 @@
   color: #CFCB90;
 
   &.modifier {
-    color: #96CBFE;
+    color: @syntax-lang-accent;
   }
 }
 
@@ -52,7 +57,7 @@
 }
 
 .variable {
-  color: #C6C5FE;
+  color: @syntax-lang-var;
 }
 
 .invalid.deprecated {
@@ -129,7 +134,7 @@
 }
 
 .source .entity.name.tag, .source .entity.other.attribute-name, .meta.tag.inline, .meta.tag.inline .entity {
-  color: #96CBFE;
+  color: @syntax-lang-accent;
 }
 
 .entity {
@@ -167,12 +172,12 @@
 
   &.tag,
   &.tag .entity {
-    color: #96CBFE;
+    color: @syntax-lang-accent;
   }
 
   &.selector.css .entity.name.tag {
     text-decoration: underline;
-    color: #96CBFE;
+    color: @syntax-lang-accent;
   }
 
   &.selector.css .entity.other.attribute-name.tag.pseudo-class {
