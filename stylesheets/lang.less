@@ -1,8 +1,18 @@
 // Default language syntax highlighting
-
 // TODO: Explore more, this is just a first POC
-@syntax-lang-accent: hsl(@base-hue,66%,66%);
-@syntax-lang-var: hsl(@base-hue,100%,80%);
+
+// switch lightness based on base var
+.setLight(@light) when (@light >=50 ) {
+   @syntax-lightness: 30%;
+}
+.setLight(@light) when (@light <50 ) {
+   @syntax-lightness: 80%;
+}
+.setLight(@base-lightness);
+
+
+@syntax-lang-accent: hsl(@base-hue, @base-saturation*4, @syntax-lightness);
+@syntax-lang-var: @syntax-lang-accent;
 
 
 .bracket-matcher {
