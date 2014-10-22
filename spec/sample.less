@@ -1,0 +1,36 @@
+// Some sample LESS to test a "typical" use case.
+// TODO
+
+// Colors
+@color-base:   #ccc;
+@color-accent: #09f;
+
+// Sizes
+@size-small: 12px;
+@size-base:  16px;
+@size-large: 24px;
+
+body {
+  margin: 0;
+  height: 100%;
+}
+
+.selector {
+  position: absolute;
+  width: 200px;
+  font-size: @size-small;
+  background: @color-base url(logo.svg);
+  opacity: .5;
+}
+
+.selector:first-child {
+  -webkit-transform: translate(100px, 20px);
+          transform: translate(100px, 20px);
+}
+
+@media (min-width: 500px) and (min-height: 800px) {
+  .selector {
+    font-size: 2em;
+    transition: opacity .2s ease-in-out;
+  }
+}
