@@ -42,8 +42,27 @@
   }
 
   .gutter {
-    //background-color: @syntax-gutter-background-color;
-    //border-right: 1px solid @base-border-color;
+
+    .line-number {
+      color: @syntax-gutter-text-color;
+
+      &.cursor-line {
+        color: @syntax-gutter-text-color-selected;
+        background-color: @syntax-gutter-background-color-selected;
+      }
+
+      &.cursor-line-no-selection {
+        background-color: transparent;
+      }
+
+      .icon-right {
+        color: @syntax-text-color;
+      }
+
+      .icon-right {
+        color: @syntax-text-color;
+      }
+    }
   }
 
   .gutter .line-number.folded,
@@ -51,26 +70,4 @@
   .fold-marker:after {
     color: @syntax-gutter-text-color-selected;
   }
-
-  .line-number {
-    color: @syntax-gutter-text-color;
-  }
-
-  .line-number.cursor-line {
-    color: @syntax-gutter-text-color-selected;
-    background-color: @syntax-gutter-background-color-selected;
-  }
-
-  .line-number.cursor-line-no-selection {
-    background-color: transparent;
-  }
-
-  .line-number .icon-right {
-    color: @syntax-text-color;
-  }
-
-  .line-number .icon-right {
-    color: @syntax-text-color;
-  }
-
 }
