@@ -1,14 +1,14 @@
 @syntax-hue: @base-hue;
 @syntax-base-color: @level-2-color;
 @syntax-guide-color: fade(@syntax-text-color, 15%);
-
+@syntax-accent-color: @base-accent-color;
 
 // This defines all syntax variables that syntax themes must implement when they
 // include a syntax-variables.less file.
 
 // General colors
-@syntax-text-color: hsl(@syntax-hue, 16%, 72%); // unused
-@syntax-cursor-color: hsl(@syntax-hue, 100%, 66%);
+@syntax-text-color: hsl(@syntax-hue, 16%, 72%);
+@syntax-cursor-color: @syntax-accent-color;
 @syntax-background-color: @syntax-base-color;
 @syntax-selection-color: lighten(@syntax-background-color, 10%);
 @syntax-selection-flash-color: @syntax-text-color;
@@ -30,10 +30,11 @@
 @syntax-gutter-background-color-selected: lighten(@syntax-background-color, 2%);
 
 // For git diff info. i.e. in the gutter
-@syntax-color-renamed: #96CBFE;
-@syntax-color-added: #A8FF60;
-@syntax-color-modified: #E9C062;
-@syntax-color-removed: #CC6666;
+@syntax-color-renamed:  hsl(208, 100%, 50%);
+@syntax-color-added:    hsl(160,  80%, 42%);
+@syntax-color-modified: hsl(30,   40%, 60%);
+@syntax-color-removed:  hsl(0,    70%, 60%);
+
 
 
 // Fallback vars
@@ -41,4 +42,5 @@
 @base-hue: 220;
 @base-saturation: 12%;
 @base-lightness:   14%;
+@base-accent-color: hsl(220, 100%, 60%);
 @level-2-color: hsl(220, 12%, 18%);
