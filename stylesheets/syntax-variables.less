@@ -3,7 +3,7 @@
 @base-hue:          220;
 @base-accent-hue:   220;
 @base-saturation:   20%;
-@base-lightness:    20%;
+@base-lightness:    92%;
 @base-contrast:     0%;
 @base-accent-color: hsl(220, 100%, 60%);
 @level-2-color:     hsl(220, 12%, 18%);
@@ -11,13 +11,13 @@
 // Config
 @syntax-hue:          @base-hue;
 @syntax-hue-accent:   @base-accent-hue;
-@syntax-sat:          @base-saturation * 3;
-@syntax-lightness:    @base-lightness;
+@syntax-sat:          @base-saturation * 10;
+@syntax-lightness:    @base-lightness / 4;
 @syntax-contrast:     @base-contrast * 10;
 
 @syntax-accent-color: @base-accent-color;
 @syntax-base-color:   @level-2-color;
-@syntax-text: hsl(@base-hue, @base-saturation, max(30%, (@base-lightness + @base-contrast) * 3) );
+@syntax-text: hsl(@base-hue, @base-saturation, min(70%, ( 40% + @syntax-lightness + @syntax-contrast) ) );
 @syntax-guide-color:  fade(@syntax-text, 15%);
 
 
@@ -28,7 +28,7 @@
 @syntax-text-color:            @syntax-text;
 @syntax-cursor-color:          @syntax-accent-color;
 @syntax-background-color:      @syntax-base-color;
-@syntax-selection-color:       lighten(@syntax-background-color, 10%);
+@syntax-selection-color:       darken(@syntax-background-color, 8%);
 @syntax-selection-flash-color: @syntax-text-color;
 
 // Guide colors
@@ -41,11 +41,11 @@
 @syntax-result-marker-color-selected: #fff;
 
 // Gutter colors
-@syntax-gutter-text-color: hsl(@syntax-hue, @syntax-sat/8, 16% + @syntax-lightness + @syntax-contrast);
+@syntax-gutter-text-color: hsl(@syntax-hue, @syntax-sat, 50% + @syntax-lightness + @syntax-contrast);
 @syntax-gutter-text-color-selected: @syntax-text-color;
 
-@syntax-gutter-background-color: darken(@syntax-background-color, 1%);
-@syntax-gutter-background-color-selected: lighten(@syntax-background-color, 2%);
+@syntax-gutter-background-color: transparent;
+@syntax-gutter-background-color-selected: darken(@syntax-background-color, 6%);
 
 // For git diff info. i.e. in the gutter
 @syntax-color-renamed:  hsl(208, 100%, 50%);
