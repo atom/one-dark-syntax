@@ -1,34 +1,19 @@
 // Default language syntax highlighting
-// TODO: Explore more, this is just a first POC
-// FIXME: Explore more, this is just a first POC
-
-
-// Config -----------------------------------
-
-// Default (fallback without UI theme)
-@syntax-hue: 220; // 220
-@syntax-hue-accent: 40; // 40
-@syntax-sat: 60%; // 60%
-
-// Override (uses vars from UI theme)
-@syntax-hue: @base-hue;
-@syntax-hue-accent: @base-hue + 180;
-@syntax-sat: @base-saturation * 4;
 
 
 // Colors -----------------------------------
 
 // Base hue
-@syntax-b1: hsl(@syntax-hue, @syntax-sat  , 84%);
-@syntax-b2: hsl(@syntax-hue, @syntax-sat  , 66%);
-@syntax-b3: hsl(@syntax-hue, @syntax-sat/3, 48%);
-@syntax-b4: hsl(@syntax-hue, @syntax-sat/8, 36%);
+@syntax-b1: hsl(@syntax-hue, @syntax-sat  , 64% + @syntax-lightness + @syntax-contrast);
+@syntax-b2: hsl(@syntax-hue, @syntax-sat  , 46% + @syntax-lightness + @syntax-contrast);
+@syntax-b3: hsl(@syntax-hue, @syntax-sat/3, 28% + @syntax-lightness + @syntax-contrast);
+@syntax-b4: hsl(@syntax-hue, @syntax-sat/8, 16% + @syntax-lightness + @syntax-contrast);
 
 // Accent hue
-@syntax-a1: hsl(@syntax-hue-accent, @syntax-sat  , 72%);
-@syntax-a2: hsl(@syntax-hue-accent, @syntax-sat/2, 50%);
-@syntax-a3: hsl(@syntax-hue-accent, @syntax-sat/4, 54%);
-@syntax-a4: hsl(@syntax-hue-accent, @syntax-sat/8, 36%);
+@syntax-a1: hsl(@syntax-hue-accent, @syntax-sat  , 52% + @syntax-lightness + @syntax-contrast);
+@syntax-a2: hsl(@syntax-hue-accent, @syntax-sat/2, 30% + @syntax-lightness + @syntax-contrast);
+@syntax-a3: hsl(@syntax-hue-accent, @syntax-sat/4, 34% + @syntax-lightness + @syntax-contrast);
+@syntax-a4: hsl(@syntax-hue-accent, @syntax-sat/8, 16% + @syntax-lightness + @syntax-contrast);
 
 
 // Base hue -----------------------------------

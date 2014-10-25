@@ -1,16 +1,34 @@
-@syntax-hue: @base-hue;
-@syntax-base-color: @level-2-color;
-@syntax-guide-color: fade(@syntax-text-color, 15%);
+// Fallback vars
+// This syntax theme uses vars from "Mod Atom Dark" UI theme
+@base-hue:          220;
+@base-accent-hue:   220;
+@base-saturation:   20%;
+@base-lightness:    20%;
+@base-contrast:     0%;
+@base-accent-color: hsl(220, 100%, 60%);
+@level-2-color:     hsl(220, 12%, 18%);
+
+// Config
+@syntax-hue:          @base-hue;
+@syntax-hue-accent:   @base-accent-hue;
+@syntax-sat:          @base-saturation * 3;
+@syntax-lightness:    @base-lightness;
+@syntax-contrast:     @base-contrast * 10;
+
 @syntax-accent-color: @base-accent-color;
+@syntax-base-color:   @level-2-color;
+@syntax-text: hsl(@base-hue, @base-saturation, max(30%, (@base-lightness + @base-contrast) * 3) );
+@syntax-guide-color:  fade(@syntax-text, 15%);
+
 
 // This defines all syntax variables that syntax themes must implement when they
 // include a syntax-variables.less file.
 
 // General colors
-@syntax-text-color: hsl(@syntax-hue, 16%, 72%);
-@syntax-cursor-color: @syntax-accent-color;
-@syntax-background-color: @syntax-base-color;
-@syntax-selection-color: lighten(@syntax-background-color, 10%);
+@syntax-text-color:            @syntax-text;
+@syntax-cursor-color:          @syntax-accent-color;
+@syntax-background-color:      @syntax-base-color;
+@syntax-selection-color:       lighten(@syntax-background-color, 10%);
 @syntax-selection-flash-color: @syntax-text-color;
 
 // Guide colors
@@ -23,7 +41,7 @@
 @syntax-result-marker-color-selected: #fff;
 
 // Gutter colors
-@syntax-gutter-text-color: darken(@syntax-text-color, 30%);
+@syntax-gutter-text-color: hsl(@syntax-hue, @syntax-sat/8, 16% + @syntax-lightness + @syntax-contrast);
 @syntax-gutter-text-color-selected: @syntax-text-color;
 
 @syntax-gutter-background-color: darken(@syntax-background-color, 1%);
@@ -34,13 +52,3 @@
 @syntax-color-added:    hsl(160,  80%, 42%);
 @syntax-color-modified: hsl(30,   40%, 60%);
 @syntax-color-removed:  hsl(0,    70%, 60%);
-
-
-
-// Fallback vars
-// This syntax theme uses vars from "Mod Atom Dark" UI theme
-@base-hue: 220;
-@base-saturation: 12%;
-@base-lightness:   14%;
-@base-accent-color: hsl(220, 100%, 60%);
-@level-2-color: hsl(220, 12%, 18%);
