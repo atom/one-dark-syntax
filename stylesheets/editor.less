@@ -1,0 +1,73 @@
+@import 'syntax-variables';
+
+.editor-colors {
+  background-color: @syntax-background-color;
+  color: @syntax-text-color;
+}
+
+.editor {
+
+  .line.cursor-line {
+    background-color: lighten(@syntax-background-color, 2%);
+  }
+
+  .invisible {
+    color: @syntax-text-color;
+  }
+
+  .cursor {
+    border-color: @syntax-cursor-color;
+  }
+
+  .selection .region {
+    background-color: @syntax-selection-color;
+  }
+
+  .bracket-matcher {
+    border-bottom: 1px solid #f8de7e;
+    margin-top: -1px;
+    opacity: .7;
+  }
+
+  .invisible-character {
+    color: @syntax-invisible-character-color;
+  }
+
+  .indent-guide {
+    color: @syntax-indent-guide-color;
+  }
+
+  .wrap-guide {
+    background-color: @syntax-wrap-guide-color;
+  }
+
+  .gutter {
+
+    .line-number {
+      color: @syntax-gutter-text-color;
+
+      &.cursor-line {
+        color: @syntax-gutter-text-color-selected;
+        background-color: @syntax-gutter-background-color-selected;
+      }
+
+      &.cursor-line-no-selection {
+        background-color: transparent;
+      }
+
+      .icon-right {
+        color: @syntax-text-color;
+      }
+
+      .icon-right {
+        color: @syntax-text-color;
+      }
+    }
+  }
+
+  .gutter .line-number.folded,
+  .gutter .line-number:after,
+  .fold-marker:after {
+    color: @syntax-gutter-text-color-selected;
+  }
+}

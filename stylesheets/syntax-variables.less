@@ -1,30 +1,54 @@
+// Fallback vars
+// This syntax theme uses vars from "Mod Atom Dark" UI theme
+@base-hue:          220;
+@base-accent-hue:   220;
+@base-saturation:   20%;
+@base-lightness:    20%;
+@base-contrast:     0%;
+@base-accent-color: hsl(220, 100%, 60%);
+@level-2-color:     hsl(220, 12%, 18%);
+
+// Config
+@syntax-hue:          @base-hue;
+@syntax-hue-accent:   @base-accent-hue;
+@syntax-sat:          @base-saturation * 3;
+@syntax-lightness:    @base-lightness;
+@syntax-contrast:     @base-contrast * 10;
+
+@syntax-accent-color: @base-accent-color;
+@syntax-base-color:   @level-2-color;
+@syntax-text: hsl(@base-hue, @base-saturation, max(30%, (@base-lightness + @base-contrast) * 3) );
+@syntax-guide-color:  fade(@syntax-text, 15%);
+
+
 // This defines all syntax variables that syntax themes must implement when they
 // include a syntax-variables.less file.
 
 // General colors
-@syntax-text-color: #555;
-@syntax-cursor-color: black;
-@syntax-selection-color: #afc4da;
-@syntax-selection-flash-color: #69c;
-@syntax-background-color: white;
+@syntax-text-color:            @syntax-text;
+@syntax-cursor-color:          @syntax-accent-color;
+@syntax-background-color:      @syntax-base-color;
+@syntax-selection-color:       lighten(@syntax-background-color, 10%);
+@syntax-selection-flash-color: @syntax-text-color;
 
 // Guide colors
-@syntax-wrap-guide-color: rgba(85, 85, 85, .2);
-@syntax-indent-guide-color: rgba(85, 85, 85, .2);
-@syntax-invisible-character-color: rgba(85, 85, 85, .2);
+@syntax-wrap-guide-color: @syntax-guide-color;
+@syntax-indent-guide-color: @syntax-guide-color;
+@syntax-invisible-character-color: @syntax-guide-color;
 
 // For find and replace markers
-@syntax-result-marker-color: #999;
-@syntax-result-marker-color-selected: black;
+@syntax-result-marker-color: @syntax-text-color;
+@syntax-result-marker-color-selected: #fff;
 
 // Gutter colors
-@syntax-gutter-text-color: @syntax-text-color;
-@syntax-gutter-text-color-selected: @syntax-gutter-text-color;
-@syntax-gutter-background-color: white;
-@syntax-gutter-background-color-selected: rgba(255, 255, 134, 0.34);
+@syntax-gutter-text-color: hsl(@syntax-hue, @syntax-sat/8, 16% + @syntax-lightness + @syntax-contrast);
+@syntax-gutter-text-color-selected: @syntax-text-color;
+
+@syntax-gutter-background-color: darken(@syntax-background-color, 1%);
+@syntax-gutter-background-color-selected: lighten(@syntax-background-color, 2%);
 
 // For git diff info. i.e. in the gutter
-@syntax-color-renamed: #96CBFE;
-@syntax-color-added: #718C00;
-@syntax-color-modified: #ff982d;
-@syntax-color-removed: #D14;
+@syntax-color-renamed:  hsl(208, 100%, 50%);
+@syntax-color-added:    hsl(160,  80%, 42%);
+@syntax-color-modified: hsl(30,   40%, 60%);
+@syntax-color-removed:  hsl(0,    70%, 60%);
