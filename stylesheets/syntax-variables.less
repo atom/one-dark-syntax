@@ -17,8 +17,8 @@
 
 @syntax-accent-color: @base-accent-color;
 @syntax-base-color:   @level-2-color;
-@syntax-text: hsl(@base-hue, @base-saturation, min(70%, ( 40% + @syntax-lightness + @syntax-contrast) ) );
-@syntax-guide-color:  fade(@syntax-text, 15%);
+@syntax-text: hsl(@syntax-hue, @syntax-sat, min(70%, ( 40% + @syntax-lightness + @syntax-contrast) ) );
+@syntax-guide-color:  fade(@syntax-text, 40%);
 
 
 // This defines all syntax variables that syntax themes must implement when they
@@ -41,8 +41,8 @@
 @syntax-result-marker-color-selected: #fff;
 
 // Gutter colors
-@syntax-gutter-text-color: hsl(@syntax-hue, @syntax-sat, 50% + @syntax-lightness + @syntax-contrast);
-@syntax-gutter-text-color-selected: @syntax-text-color;
+@syntax-gutter-text-color: hsl(@syntax-hue, @syntax-sat/4, 48% + @syntax-lightness + @syntax-contrast);
+@syntax-gutter-text-color-selected: hsl(@syntax-hue, @syntax-sat/4, 20% + @syntax-lightness + @syntax-contrast);
 
 @syntax-gutter-background-color: transparent;
 @syntax-gutter-background-color-selected: darken(@syntax-background-color, 6%);
