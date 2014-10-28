@@ -11,13 +11,13 @@
 // Config
 @syntax-hue:          @base-hue;
 @syntax-hue-accent:   @base-accent-hue;
-@syntax-sat:          @base-saturation * 10;
+@syntax-saturation:   @base-saturation * 12;
 @syntax-lightness:    @base-lightness / 4;
 @syntax-contrast:     @base-contrast * 10;
 
 @syntax-accent-color: @base-accent-color;
 @syntax-base-color:   @level-2-color;
-@syntax-text: hsl(@syntax-hue, @syntax-sat, min(70%, ( 40% + @syntax-lightness + @syntax-contrast) ) );
+@syntax-text: hsl(@syntax-hue, @syntax-saturation, min(70%, ( 40% + @syntax-lightness + @syntax-contrast) ) );
 @syntax-guide-color:  fade(@syntax-text, 40%);
 
 
@@ -41,8 +41,8 @@
 @syntax-result-marker-color-selected: #fff;
 
 // Gutter colors
-@syntax-gutter-text-color: hsl(@syntax-hue, @syntax-sat/4, 48% + @syntax-lightness + @syntax-contrast);
-@syntax-gutter-text-color-selected: hsl(@syntax-hue, @syntax-sat/4, 20% + @syntax-lightness + @syntax-contrast);
+@syntax-gutter-text-color: hsl(@syntax-hue, @syntax-saturation/4, 48% + @syntax-lightness + @syntax-contrast);
+@syntax-gutter-text-color-selected: hsl(@syntax-hue, @syntax-saturation/4, 20% + @syntax-lightness + @syntax-contrast);
 
 @syntax-gutter-background-color: transparent;
 @syntax-gutter-background-color-selected: darken(@syntax-background-color, 6%);
