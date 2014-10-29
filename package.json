@@ -1,9 +1,9 @@
 {
-  "name": "mod-atom-dark-syntax",
+  "name": "one-dark-syntax",
   "theme": "syntax",
-  "version": "0.19.0",
-  "description": "Modified dark syntax theme",
-  "repository": "https://github.com/simurai/atom-dark-syntax",
+  "version": "0.0.0",
+  "description": "A dark syntax theme",
+  "repository": "https://github.com/atom/one-dark-syntax",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
