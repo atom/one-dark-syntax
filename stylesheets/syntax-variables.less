@@ -1,12 +1,12 @@
 // Fallback vars
 // This syntax theme uses vars from "Mod Atom Dark" UI theme
-@base-hue:          220;
+@base-hue:           40;
 @base-accent-hue:   220;
-@base-saturation:   20%;
-@base-lightness:    92%;
-@base-contrast:     0%;
+@base-saturation:    2%;
+@base-lightness:    98%;
+@base-contrast:      0%;
 @base-accent-color: hsl(220, 100%, 60%);
-@level-2-color:     hsl(220, 12%, 18%);
+@level-2-color:     hsl(40, 2%, 98%);
 
 // Config
 @syntax-hue:          @base-hue;
@@ -19,7 +19,6 @@
 @syntax-base-color:   @level-2-color;
 @syntax-text: hsl(@syntax-hue, @syntax-saturation, min(70%, ( 40% + @syntax-lightness + @syntax-contrast) ) );
 @syntax-guide-color:  fade(@syntax-text, 40%);
-
 
 // This defines all syntax variables that syntax themes must implement when they
 // include a syntax-variables.less file.
@@ -41,14 +40,14 @@
 @syntax-result-marker-color-selected: #fff;
 
 // Gutter colors
-@syntax-gutter-text-color: hsl(@syntax-hue, @syntax-saturation/4, 48% + @syntax-lightness + @syntax-contrast);
-@syntax-gutter-text-color-selected: hsl(@syntax-hue, @syntax-saturation/4, 20% + @syntax-lightness + @syntax-contrast);
+@syntax-gutter-text-color: hsl(@syntax-hue, @syntax-saturation, 44% + @syntax-lightness + @syntax-contrast);
+@syntax-gutter-text-color-selected: hsl(@syntax-hue, @syntax-saturation, 16% + @syntax-lightness + @syntax-contrast);
 
 @syntax-gutter-background-color: transparent;
 @syntax-gutter-background-color-selected: darken(@syntax-background-color, 6%);
 
 // For git diff info. i.e. in the gutter
-@syntax-color-renamed:  hsl(208, 100%, 50%);
-@syntax-color-added:    hsl(160,  80%, 42%);
-@syntax-color-modified: hsl(30,   40%, 60%);
-@syntax-color-removed:  hsl(0,    70%, 60%);
+@syntax-color-renamed:  hsl(208, 100%, 66%);
+@syntax-color-added:    hsl(155, 100%, 54%);
+@syntax-color-modified: hsl( 40, 100%, 60%);
+@syntax-color-removed:  hsl(  0, 100%, 54%);
