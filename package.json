@@ -1,9 +1,9 @@
 {
-  "name": "mod-atom-light-syntax",
+  "name": "one-light-syntax",
   "theme": "syntax",
-  "version": "0.20.0",
-  "description": "Modified light syntax theme",
-  "repository": "https://github.com/simurai/atom-light-syntax",
+  "version": "0.0.0",
+  "description": "Atom One light syntax theme",
+  "repository": "https://github.com/atom/one-light-syntax",
   "license": "MIT",
   "engines": {
     "atom": ">0.40.0"
