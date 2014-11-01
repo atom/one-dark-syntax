@@ -45,6 +45,20 @@
 
     .line-number {
       color: @syntax-gutter-text-color;
+      -webkit-font-smoothing: antialiased;
+
+      &.git-line-removed:before {
+        bottom: -3px;
+      }
+      &.git-line-removed:after {
+        content: "";
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        width: 25px;
+        border-bottom: 1px dotted fade(@syntax-color-removed, 50%);
+        pointer-events: none;
+      }
 
       &.cursor-line {
         color: @syntax-gutter-text-color-selected;
