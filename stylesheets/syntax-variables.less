@@ -40,14 +40,14 @@
 @syntax-result-marker-color-selected: #fff;
 
 // Gutter colors
-@syntax-gutter-text-color: hsl(@syntax-hue, @syntax-saturation, 44% + @syntax-lightness + @syntax-contrast);
-@syntax-gutter-text-color-selected: hsl(@syntax-hue, @syntax-saturation, 16% + @syntax-lightness + @syntax-contrast);
+@syntax-gutter-text-color: hsl(@syntax-hue, @syntax-saturation/2, 36% + @syntax-lightness + @syntax-contrast);
+@syntax-gutter-text-color-selected: hsl(@syntax-hue, @syntax-saturation/2, 16% + @syntax-lightness + @syntax-contrast);
 
 @syntax-gutter-background-color: transparent;
-@syntax-gutter-background-color-selected: darken(@syntax-background-color, 6%);
+@syntax-gutter-background-color-selected: darken(@syntax-background-color, 4%);
 
 // For git diff info. i.e. in the gutter
 @syntax-color-renamed:  hsl(208, 100%, 66%);
-@syntax-color-added:    hsl(155, 100%, 54%);
-@syntax-color-modified: hsl( 40, 100%, 60%);
+@syntax-color-added:    hsl(132,  60%, 44%);
+@syntax-color-modified: hsl( 40,  90%, 50%);
 @syntax-color-removed:  hsl(  0, 100%, 54%);
