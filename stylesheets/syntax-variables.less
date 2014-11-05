@@ -6,27 +6,27 @@
 // This syntax theme uses variables from the "UI" theme,
 // bellow some fallback variables for stand-alone use
 
-@base-hue:          220;
-@base-accent-hue:    44;
-@base-saturation:   20%;
-@base-lightness:    20%;
-@base-contrast:      0%;
-@base-accent-color: hsl(220, 100%, 60%);
-@level-2-color:     hsl(220, 12%, 18%);
+@theme-color:             hsl(220, 100%, 50%);
+@theme-accent-color:      spin(@theme-color, 176);
 
+@theme-adjust-saturation: 0%; // -/+n%
+@theme-adjust-contrast:   0%;
 
 
 // Config -----------------------------------
 
-@syntax-hue:          @base-hue;
-@syntax-hue-accent:   @base-accent-hue;
-@syntax-sat:          @base-saturation * 3;
-@syntax-lightness:    @base-lightness;
-@syntax-contrast:     @base-contrast * 10;
+@syntax-hue:          hsvhue(@theme-color);
+@syntax-hue-accent:   hsvhue(@theme-accent-color);
+@syntax-saturation:   max(20% + @theme-adjust-saturation, 0%); // limit to > 0%
+@syntax-brightness:   20%;
+@syntax-contrast:     @theme-adjust-contrast * 0.1;
 
-@syntax-accent-color: @base-accent-color;
-@syntax-base-color:   @level-2-color;
-@syntax-text: hsl(@base-hue, @base-saturation, max(30%, (@base-lightness + @base-contrast) * 3) );
+
+// Base colors -----------------------------------
+
+@syntax-accent-color: hsl(@syntax-hue-accent, 90% + @theme-adjust-saturation, 40% + (@syntax-brightness + (@syntax-contrast*10)) );
+@syntax-base-color:   hsv(@syntax-hue, @syntax-saturation, @syntax-brightness);
+@syntax-text:         hsl(@syntax-hue, @syntax-saturation, max(30%, (@syntax-brightness + @syntax-contrast) * 3) );
 @syntax-guide-color:  fade(@syntax-text, 15%);
 
 
@@ -34,15 +34,15 @@
 // Language colors -----------------------------------
 
 // Base hue
-@syntax-b1: hsl(@syntax-hue, @syntax-sat  , 64% + @syntax-lightness + @syntax-contrast);
-@syntax-b2: hsl(@syntax-hue, @syntax-sat  , 46% + @syntax-lightness + @syntax-contrast);
-@syntax-b3: hsl(@syntax-hue, @syntax-sat/3, 28% + @syntax-lightness + @syntax-contrast);
-@syntax-b4: hsl(@syntax-hue, @syntax-sat/8, 16% + @syntax-lightness + @syntax-contrast);
+@syntax-b1: hsl(@syntax-hue, @syntax-saturation*6, 64% + @syntax-brightness + @syntax-contrast);
+@syntax-b2: hsl(@syntax-hue, @syntax-saturation*3, 46% + @syntax-brightness + @syntax-contrast);
+@syntax-b3: hsl(@syntax-hue, @syntax-saturation*2, 28% + @syntax-brightness + @syntax-contrast);
+@syntax-b4: hsl(@syntax-hue, @syntax-saturation  , 16% + @syntax-brightness + @syntax-contrast);
 
 // Accent hue
-@syntax-a1: hsl(@syntax-hue-accent, @syntax-sat  , 52% + @syntax-lightness + @syntax-contrast);
-@syntax-a2: hsl(@syntax-hue-accent, @syntax-sat/2, 30% + @syntax-lightness + @syntax-contrast);
-@syntax-a3: hsl(@syntax-hue-accent, @syntax-sat/8, 16% + @syntax-lightness + @syntax-contrast);
+@syntax-a1: hsl(@syntax-hue-accent, @syntax-saturation*3, 52% + @syntax-brightness + @syntax-contrast);
+@syntax-a2: hsl(@syntax-hue-accent, @syntax-saturation*1, 30% + @syntax-brightness + @syntax-contrast);
+@syntax-a3: hsl(@syntax-hue-accent, @syntax-saturation/2, 16% + @syntax-brightness + @syntax-contrast);
 
 
 
@@ -50,13 +50,13 @@
 
 @syntax-text-color:            @syntax-text;
 @syntax-cursor-color:          @syntax-accent-color;
-@syntax-background-color:      @syntax-base-color;
+@syntax-background-color:      darken(@syntax-base-color, @syntax-contrast);
 @syntax-selection-color:       lighten(@syntax-background-color, 10%);
 @syntax-selection-flash-color: @syntax-text-color;
 
 // Guide colors
-@syntax-wrap-guide-color: @syntax-guide-color;
-@syntax-indent-guide-color: @syntax-guide-color;
+@syntax-wrap-guide-color:          @syntax-guide-color;
+@syntax-indent-guide-color:        @syntax-guide-color;
 @syntax-invisible-character-color: @syntax-guide-color;
 
 // For find and replace markers
@@ -67,7 +67,7 @@
 
 // Gutter colors -----------------------------------
 
-@syntax-gutter-text-color: hsl(@syntax-hue, @syntax-sat/8, 16% + @syntax-lightness + @syntax-contrast);
+@syntax-gutter-text-color:          hsl(@syntax-hue, @syntax-saturation/8, 16% + @syntax-brightness + @syntax-contrast);
 @syntax-gutter-text-color-selected: @syntax-text-color;
 
 @syntax-gutter-background-color: darken(@syntax-background-color, 1%);
