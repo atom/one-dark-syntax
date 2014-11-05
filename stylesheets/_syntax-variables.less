@@ -1,0 +1,83 @@
+
+// Syntax Variables for Atom Theme: One Dark
+
+
+// Fallback -----------------------------------
+// This syntax theme uses variables from the "UI" theme,
+// bellow some fallback variables for stand-alone use
+
+@base-hue:          220;
+@base-accent-hue:   220;
+@base-saturation:   20%;
+@base-lightness:    20%;
+@base-contrast:     0%;
+@base-accent-color: hsl(220, 100%, 60%);
+@level-2-color:     hsl(220, 12%, 18%);
+
+
+
+// Config -----------------------------------
+
+@syntax-hue:          @base-hue;
+@syntax-hue-accent:   @base-accent-hue;
+@syntax-sat:          @base-saturation * 3;
+@syntax-lightness:    @base-lightness;
+@syntax-contrast:     @base-contrast * 10;
+
+@syntax-accent-color: @base-accent-color;
+@syntax-base-color:   @level-2-color;
+@syntax-text: hsl(@base-hue, @base-saturation, max(30%, (@base-lightness + @base-contrast) * 3) );
+@syntax-guide-color:  fade(@syntax-text, 15%);
+
+
+
+// Language colors -----------------------------------
+
+// Base hue
+@syntax-b1: hsl(@syntax-hue, @syntax-sat  , 64% + @syntax-lightness + @syntax-contrast);
+@syntax-b2: hsl(@syntax-hue, @syntax-sat  , 46% + @syntax-lightness + @syntax-contrast);
+@syntax-b3: hsl(@syntax-hue, @syntax-sat/3, 28% + @syntax-lightness + @syntax-contrast);
+@syntax-b4: hsl(@syntax-hue, @syntax-sat/8, 16% + @syntax-lightness + @syntax-contrast);
+
+// Accent hue
+@syntax-a1: hsl(@syntax-hue-accent, @syntax-sat  , 52% + @syntax-lightness + @syntax-contrast);
+@syntax-a2: hsl(@syntax-hue-accent, @syntax-sat/2, 30% + @syntax-lightness + @syntax-contrast);
+@syntax-a3: hsl(@syntax-hue-accent, @syntax-sat/8, 16% + @syntax-lightness + @syntax-contrast);
+
+
+
+// General colors -----------------------------------
+
+@syntax-text-color:            @syntax-text;
+@syntax-cursor-color:          @syntax-accent-color;
+@syntax-background-color:      @syntax-base-color;
+@syntax-selection-color:       lighten(@syntax-background-color, 10%);
+@syntax-selection-flash-color: @syntax-text-color;
+
+// Guide colors
+@syntax-wrap-guide-color: @syntax-guide-color;
+@syntax-indent-guide-color: @syntax-guide-color;
+@syntax-invisible-character-color: @syntax-guide-color;
+
+// For find and replace markers
+@syntax-result-marker-color: @syntax-text-color;
+@syntax-result-marker-color-selected: #fff;
+
+
+
+// Gutter colors -----------------------------------
+
+@syntax-gutter-text-color: hsl(@syntax-hue, @syntax-sat/8, 16% + @syntax-lightness + @syntax-contrast);
+@syntax-gutter-text-color-selected: @syntax-text-color;
+
+@syntax-gutter-background-color: darken(@syntax-background-color, 1%);
+@syntax-gutter-background-color-selected: lighten(@syntax-background-color, 2%);
+
+
+
+// Git colors -----------------------------------
+// For git diff info. i.e. in the gutter
+@syntax-color-renamed:  hsl(208, 100%, 60%);
+@syntax-color-added:    hsl(150,  60%, 54%);
+@syntax-color-modified: hsl(40,   60%, 70%);
+@syntax-color-removed:  hsl(0,    70%, 60%);

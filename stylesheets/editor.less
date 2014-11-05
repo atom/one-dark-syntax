@@ -1,4 +1,5 @@
-@import 'syntax-variables';
+
+// Editor styles (background, gutter, guides)
 
 .editor-colors {
   background-color: @syntax-background-color;
@@ -8,7 +9,7 @@
 .editor {
 
   .line.cursor-line {
-    background-color: darken(@syntax-background-color, 3%);
+    background-color: lighten(@syntax-background-color, 2%);
   }
 
   .invisible {
@@ -24,7 +25,7 @@
   }
 
   .bracket-matcher {
-    border-bottom: 1px solid #f8de7e;
+    border-bottom: 1px solid @syntax-accent-color;
     margin-top: -1px;
     opacity: .7;
   }
@@ -47,14 +48,6 @@
       color: @syntax-gutter-text-color;
       -webkit-font-smoothing: antialiased;
 
-      &.git-line-added {
-        color: @syntax-color-added;
-      }
-
-      &.git-line-modified {
-        color: @syntax-color-modified;
-      }
-
       &.git-line-removed:before {
         bottom: -3px;
       }
@@ -72,6 +65,7 @@
         color: @syntax-gutter-text-color-selected;
         background-color: @syntax-gutter-background-color-selected;
       }
+
       &.cursor-line-no-selection {
         background-color: transparent;
       }
@@ -80,6 +74,9 @@
         color: @syntax-text-color;
       }
 
+      .icon-right {
+        color: @syntax-text-color;
+      }
     }
   }
 

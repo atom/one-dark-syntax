@@ -1,5 +1,11 @@
-@import 'editor';
-@import 'syntax';
-@import 'core';
 
-@import "ui-variables"; // Override with UI vars
+// Atom Syntax Theme: One
+
+@import (reference) "stylesheets/syntax-variables";
+// @import (reference) "stylesheets/_syntax-variables"; // Uncomment to test light/dark theme
+
+@import 'editor';
+@import 'language';
+
+@import (reference) "ui-variables"; // Override with UI vars
+// @import (reference) "_ui-variables"; // Uncomment to test light/dark theme
