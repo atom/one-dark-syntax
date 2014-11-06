@@ -1,8 +1,7 @@
-# One Dark Atom Syntax theme
+# Atom One dark Syntax theme
 
-This theme is bundled with Atom. Enable it from the Themes section of the
-Settings view.
+> Status: Unpublished
 
-## Credits
+![one-syntax-dark](https://cloud.githubusercontent.com/assets/378023/4930877/51a4e134-656c-11e4-80ac-b46cc804092f.png)
 
-* The `/spec` sample code for testing the syntax is from [highlight.js](https://github.com/isagalaev/highlight.js/tree/master/test/detect)
+There is also a matching [UI theme](https://github.com/atom/one-dark-ui).
