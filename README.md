@@ -1,5 +1,8 @@
-# Atom One light syntax theme
+# Atom One light Syntax theme
 
-## Credits
+> Status: Unpublished
 
-* The `/spec` sample code for testing the syntax is from [highlight.js](https://github.com/isagalaev/highlight.js/tree/master/test/detect)
+![one-syntax-light](https://cloud.githubusercontent.com/assets/378023/4930892/bbeff20e-656c-11e4-9fdc-e349555f8544.png)
+
+
+There is also a matching [UI theme](https://github.com/atom/one-light-ui).
