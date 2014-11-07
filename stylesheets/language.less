@@ -1,31 +1,39 @@
 
 // Language syntax highlighting
 
+.syntax-b1 { color: @syntax-b1; }
+.syntax-b2 { color: @syntax-b2; }
+.syntax-b3 { color: @syntax-b3; }
+.syntax-b4 { color: @syntax-b4; }
+
+.syntax-a1 { color: @syntax-a1; }
+.syntax-a2 { color: @syntax-a2; }
+.syntax-a3 { color: @syntax-a3; }
+
 
 // Base hue -----------------------------------
 
 .html.elements,
 .entity,
 .tag {
-  color: @syntax-b1;
+  .syntax-b1;
 }
 
 .variable,
 .html.attribute-name,
 .css.pseudo-element {
-  color: @syntax-b2;
+  .syntax-b2();
 }
 
-.js.sourceee,
 .editor-colors,
 .support {
-  color: @syntax-b3;
+  .syntax-b3();
 }
 
 .source,
 .punctuation,
 .meta {
-  color: @syntax-b4;
+  .syntax-b4();
 }
 
 
@@ -34,13 +42,44 @@
 .string,
 .constant,
 .storage.type {
-  color: @syntax-a1;
+  .syntax-a1();
 }
 
 .keyword {
-  color: @syntax-a2;
+  .syntax-a2();
 }
 
 .comment {
-  color: @syntax-a3;
+  .syntax-a3();
+}
+
+
+// Text styles -----------------------------------
+
+.bold { font-weight: bold; }
+.italic { font-style: italic; }
+
+
+// Languages -----------------------------------
+
+// GFM
+.gfm {
+  .syntax-b1();
+
+  &.markup { .syntax-b2(); }
+  & .link { .syntax-b4(); }
+
+  &.variable { .syntax-a1(); }
+  &.support { .syntax-a2(); }
+  &.comment { .syntax-a3(); }
+
+  &.heading-1 { .syntax-a1(); }
+  &.heading-2 { .syntax-a2(); }
+  &.heading-3 { .syntax-a3(); }
+  &.heading-4 { .syntax-b2(); }
+  &.heading-5 { .syntax-b3(); }
+  &.heading-6 { .syntax-b4(); }
+
+  &.bold { .bold(); }
+  &.italic { .italic(); }
 }
