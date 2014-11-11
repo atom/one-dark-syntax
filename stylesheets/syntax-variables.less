@@ -6,9 +6,7 @@
 // This syntax theme uses variables from the "UI" theme,
 // bellow some fallback variables for stand-alone use
 
-@theme-color:             hsl(40, 100%, 50%);
-@theme-accent-color:      spin(@theme-color, 168);
-
+@theme-color:             hsl(220, 100%, 50%);
 @theme-adjust-saturation: 0%; // -/+n%
 @theme-adjust-contrast:   0%;
 
@@ -16,7 +14,7 @@
 // Config -----------------------------------
 
 @syntax-hue:          hsvhue(@theme-color);
-@syntax-hue-accent:   hsvhue(@theme-accent-color);
+@syntax-hue-accent:   @syntax-hue + 168;
 @syntax-saturation:   max(2% + @theme-adjust-saturation, 0% ); // limit to > 100%;
 @syntax-brightness:   98%;
 @syntax-contrast:     @theme-adjust-contrast * -0.1;
@@ -24,7 +22,7 @@
 
 // Base colors -----------------------------------
 
-@syntax-accent-color: hsl(@syntax-hue-accent, @theme-adjust-saturation + 100%, (@syntax-brightness + (@syntax-contrast*10) - 42%) );
+@syntax-accent-color: hsl(@syntax-hue-accent, @theme-adjust-saturation + 90%, (@syntax-brightness + (@syntax-contrast*10) - 40%) );
 @syntax-base-color:   hsv(@syntax-hue, @syntax-saturation, @syntax-brightness);
 @syntax-text:         hsl(@syntax-hue, @syntax-saturation, min(70%, ( 40% + @syntax-brightness + @syntax-contrast) ) );
 @syntax-guide-color:  fade(@syntax-text, 40%);
@@ -34,22 +32,22 @@
 // Language colors -----------------------------------
 
 // Base hue
-@syntax-b1: hsl(@syntax-hue-accent, @syntax-saturation*20, -60% + @syntax-brightness + @syntax-contrast);
-@syntax-b2: hsl(@syntax-hue-accent, @syntax-saturation*16, -56% + @syntax-brightness + @syntax-contrast);
-@syntax-b3: hsl(@syntax-hue-accent, @syntax-saturation*8 , -44% + @syntax-brightness + @syntax-contrast);
-@syntax-b4: hsl(@syntax-hue-accent, @syntax-saturation*4 , -36% + @syntax-brightness + @syntax-contrast);
+@syntax-b1: hsl(@syntax-hue, @syntax-saturation*20, -60% + @syntax-brightness + @syntax-contrast);
+@syntax-b2: hsl(@syntax-hue, @syntax-saturation*12, -56% + @syntax-brightness + @syntax-contrast);
+@syntax-b3: hsl(@syntax-hue, @syntax-saturation*4 , -44% + @syntax-brightness + @syntax-contrast);
+@syntax-b4: hsl(@syntax-hue, @syntax-saturation*2 , -36% + @syntax-brightness + @syntax-contrast);
 
 // Accent hue
-@syntax-a1: hsl(@syntax-hue, @syntax-saturation*40,  -56% + @syntax-brightness + @syntax-contrast);
-@syntax-a2: hsl(@syntax-hue, @syntax-saturation*30,  -40% + @syntax-brightness + @syntax-contrast);
-@syntax-a3: hsl(@syntax-hue, @syntax-saturation*2 ,  -36% + @syntax-brightness + @syntax-contrast);
+@syntax-a1: hsl(@syntax-hue-accent, @syntax-saturation*40,  -56% + @syntax-brightness + @syntax-contrast);
+@syntax-a2: hsl(@syntax-hue-accent, @syntax-saturation*30,  -40% + @syntax-brightness + @syntax-contrast);
+@syntax-a3: hsl(@syntax-hue-accent, @syntax-saturation*2 ,  -36% + @syntax-brightness + @syntax-contrast);
 
 
 
 // General colors -----------------------------------
 
 @syntax-text-color:            @syntax-text;
-@syntax-cursor-color:          @syntax-accent-color;
+@syntax-cursor-color:          hsl(@syntax-hue, 40%, 30%);
 @syntax-background-color:      desaturate( darken(@syntax-base-color, @syntax-contrast * 0.7 ), 100%);
 @syntax-selection-color:       darken(@syntax-background-color, 8%);
 @syntax-cursor-line:           hsla(@syntax-hue, 33%,  33%, .07); // needs to be semi-transparent to show serach results
