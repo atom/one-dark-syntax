@@ -7,8 +7,6 @@
 // bellow some fallback variables for stand-alone use
 
 @theme-color:             hsl(220, 100%, 50%);
-@theme-accent-color:      spin(@theme-color, 176);
-
 @theme-adjust-saturation: 0%; // -/+n%
 @theme-adjust-contrast:   0%;
 
@@ -16,7 +14,7 @@
 // Config -----------------------------------
 
 @syntax-hue:          hsvhue(@theme-color);
-@syntax-hue-accent:   hsvhue(@theme-accent-color);
+@syntax-hue-accent:   @syntax-hue + 176;
 @syntax-saturation:   max(20% + @theme-adjust-saturation, 0%); // limit to > 0%
 @syntax-brightness:   20%;
 @syntax-contrast:     @theme-adjust-contrast * 0.1;
@@ -24,7 +22,7 @@
 
 // Base colors -----------------------------------
 
-@syntax-accent-color: hsl(@syntax-hue-accent, 90% + @theme-adjust-saturation, 40% + (@syntax-brightness + (@syntax-contrast*10)) );
+@syntax-accent-color: hsl(@syntax-hue, @theme-adjust-saturation + 90%, (@syntax-brightness + (@syntax-contrast*10) + 40%) );
 @syntax-base-color:   hsv(@syntax-hue, @syntax-saturation, @syntax-brightness);
 @syntax-text:         hsl(@syntax-hue, @syntax-saturation, max(30%, (@syntax-brightness + @syntax-contrast) * 3) );
 @syntax-guide-color:  fade(@syntax-text, 15%);
