@@ -11,13 +11,13 @@
 @syntax-cursor-color:          hsl(@syntax-hue, 40%, 30%);
 @syntax-selection-color:       darken(@syntax-background-color, 8%);
 @syntax-selection-flash-color: @syntax-accent-color;
-@syntax-background-color:      desaturate( darken(@syntax-base-color, @syntax-contrast * 0.7 ), 100%);
+@syntax-background-color:      desaturate( darken(@syntax-base-color, @syntax-contrast * 0.7 ), 50%);
 
 // Guide colors
 @syntax-wrap-guide-color:          @syntax-guide-color;
 @syntax-indent-guide-color:        @syntax-guide-color;
 @syntax-invisible-character-color: @syntax-guide-color;
-@syntax-cursor-line:           hsla(@syntax-hue, 33%,  33%, .07); // needs to be semi-transparent to show serach results
+@syntax-cursor-line:               hsla(@syntax-hue, 33%,  33%, .07); // needs to be semi-transparent to show serach results
 
 // For find and replace markers
 @syntax-result-marker-color: @syntax-text-color;
