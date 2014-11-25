@@ -18,7 +18,7 @@
 // Base colors -----------------------------------
 
 @syntax-accent-color: hsl(@syntax-hue-accent, @theme-adjust-saturation + 90%, (@syntax-brightness + (@syntax-contrast*10) - 40%) );
-@syntax-base-color:   hsv(@syntax-hue, @syntax-saturation, @syntax-brightness);
+@syntax-base-color:   hsv(@syntax-hue, @syntax-saturation, @syntax-brightness + (@syntax-contrast*-2) );
 
 @syntax-text:         @dark-gray;
 @syntax-guide-color:  fade(@syntax-text, 40%);
