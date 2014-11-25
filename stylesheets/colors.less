@@ -18,7 +18,7 @@
 // Base colors -----------------------------------
 
 @syntax-accent-color: hsl(@syntax-hue-accent, @theme-adjust-saturation + 90%, (@syntax-brightness + (@syntax-contrast*10) - 40%) );
-@syntax-base-color:   hsv(@syntax-hue, @syntax-saturation, @syntax-brightness + (@syntax-contrast*-2) );
+@syntax-base-color:   hsl(@syntax-hue, @syntax-saturation, @syntax-brightness + (@syntax-contrast*-2) );
 
 @syntax-text:         @dark-gray;
 @syntax-guide-color:  fade(@syntax-text, 40%);
@@ -27,27 +27,25 @@
 
 // Colors: Mix Base16 Atelier Dune with Theme hue -----------------------------------
 
-@syntax-mix-saturation: 80% + @theme-adjust-saturation;
-@syntax-mix-contrast:   30% - @theme-adjust-contrast;
-@syntax-mix-grey:       20%;
-@syntax-mix-color:      10%;
+@syntax-mix-saturation: 0% + @theme-adjust-saturation;
+@syntax-mix-contrast:   10% + (@theme-adjust-contrast * .5 );
 
 // Grayscale
-@black:           mix( hsl(@syntax-hue, @syntax-mix-saturation, @syntax-mix-contrast), #20201d, @syntax-mix-grey); // 00
-@light-black:     mix( hsl(@syntax-hue, @syntax-mix-saturation, @syntax-mix-contrast), #292824, @syntax-mix-grey); // 01
-@very-dark-gray:  mix( hsl(@syntax-hue, @syntax-mix-saturation, @syntax-mix-contrast), #6e6b5e, @syntax-mix-grey); // 02
-@dark-gray:       mix( hsl(@syntax-hue, @syntax-mix-saturation, @syntax-mix-contrast), #7d7a68, @syntax-mix-grey); // 03
-@gray:            mix( hsl(@syntax-hue, @syntax-mix-saturation, @syntax-mix-contrast), #999580, @syntax-mix-grey); // 04
-@light-gray:      mix( hsl(@syntax-hue, @syntax-mix-saturation, @syntax-mix-contrast), #a6a28c, @syntax-mix-grey); // 05
-@very-light-gray: mix( hsl(@syntax-hue, @syntax-mix-saturation, @syntax-mix-contrast), #e8e4cf, @syntax-mix-grey); // 06
-@white:           mix( hsl(@syntax-hue, @syntax-mix-saturation, @syntax-mix-contrast), #fefbec, @syntax-mix-grey); // 07
+@black:           darken( #20201d, @syntax-mix-contrast ); // 00
+@light-black:     darken( #292824, @syntax-mix-contrast ); // 01
+@very-dark-gray:  darken( #6e6b5e, @syntax-mix-contrast ); // 02
+@dark-gray:       darken( #7d7a68, @syntax-mix-contrast ); // 03
+@gray:            darken( #999580, @syntax-mix-contrast ); // 04
+@light-gray:      darken( #a6a28c, @syntax-mix-contrast ); // 05
+@very-light-gray: darken( #e8e4cf, @syntax-mix-contrast ); // 06
+@white:           darken( #fefbec, @syntax-mix-contrast ); // 07
 
 // Colors
-@red:             mix( hsl(@syntax-hue, @syntax-mix-saturation, @syntax-mix-contrast), #d73737, @syntax-mix-color); // 08
-@orange:          mix( hsl(@syntax-hue, @syntax-mix-saturation, @syntax-mix-contrast), #b65611, @syntax-mix-color); // 09
-@light-orange:    mix( hsl(@syntax-hue, @syntax-mix-saturation, @syntax-mix-contrast), #cfb017, @syntax-mix-color); // 0A
-@green:           mix( hsl(@syntax-hue, @syntax-mix-saturation, @syntax-mix-contrast), #60ac39, @syntax-mix-color); // 0B
-@cyan:            mix( hsl(@syntax-hue, @syntax-mix-saturation, @syntax-mix-contrast), #1fad83, @syntax-mix-color); // 0C
-@blue:            mix( hsl(@syntax-hue, @syntax-mix-saturation, @syntax-mix-contrast), #6684e1, @syntax-mix-color); // 0D
-@purple:          mix( hsl(@syntax-hue, @syntax-mix-saturation, @syntax-mix-contrast), #b854d4, @syntax-mix-color); // 0E
-@dark-red:        mix( hsl(@syntax-hue, @syntax-mix-saturation, @syntax-mix-contrast), #d43552, @syntax-mix-color); // 0F
+@red:             darken( saturate( #d73737, @syntax-mix-saturation ), @syntax-mix-contrast ); // 08
+@orange:          darken( saturate( #b65611, @syntax-mix-saturation ), @syntax-mix-contrast ); // 09
+@light-orange:    darken( saturate( #cfb017, @syntax-mix-saturation ), @syntax-mix-contrast ); // 0A
+@green:           darken( saturate( #60ac39, @syntax-mix-saturation ), @syntax-mix-contrast ); // 0B
+@cyan:            darken( saturate( #1fad83, @syntax-mix-saturation ), @syntax-mix-contrast ); // 0C
+@blue:            darken( saturate( #6684e1, @syntax-mix-saturation ), @syntax-mix-contrast ); // 0D
+@purple:          darken( saturate( #b854d4, @syntax-mix-saturation ), @syntax-mix-contrast ); // 0E
+@dark-red:        darken( saturate( #d43552, @syntax-mix-saturation ), @syntax-mix-contrast ); // 0F
