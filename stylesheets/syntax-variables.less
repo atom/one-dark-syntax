@@ -2,6 +2,9 @@
 
 // Syntax Variables for Atom Theme: One Dark
 
+@syntax-bracket-matcher-background-color: lighten(@syntax-background-color, 6%);
+
+
 // This defines all syntax variables that syntax themes must implement when they
 // include a syntax-variables.less file.
 
@@ -26,7 +29,7 @@
 
 // Gutter colors -----------------------------------
 
-@syntax-gutter-text-color:          hsl(@syntax-hue, @syntax-saturation/8, 16% + @syntax-brightness + @syntax-contrast);
+@syntax-gutter-text-color: hsl(@syntax-hue, @syntax-saturation/8, 16% + @syntax-brightness + @syntax-contrast);
 @syntax-gutter-text-color-selected: @syntax-text-color;
 @syntax-gutter-background-color: darken(@syntax-background-color, 1%);
 @syntax-gutter-background-color-selected: lighten(@syntax-background-color, 2%);

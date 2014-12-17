@@ -19,7 +19,7 @@
   }
 
   .cursor {
-    border-color: @syntax-cursor-color;
+    border-left: 2px solid @syntax-cursor-color;
   }
 
   .selection .region {
@@ -28,9 +28,9 @@
 
   .bracket-matcher:empty, // <- deprecated
   .bracket-matcher .region {
-    border-bottom: 1px solid @syntax-accent-color;
-    margin-top: -1px;
-    opacity: .7;
+    border-bottom: 1px solid @syntax-cursor-color;
+    box-sizing: border-box;
+    background-color: @syntax-bracket-matcher-background-color;
   }
 
   .invisible-character {
