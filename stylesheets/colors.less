@@ -26,16 +26,16 @@
 
 // Colors: Mix Base16 Tomorrow with Theme hue -----------------------------------
 
-@syntax-mix-saturation: 50% + @theme-adjust-saturation;
-@syntax-mix-contrast:   50% + @theme-adjust-contrast;
-@syntax-mix-grey:       30%;
+@syntax-mix-saturation: 66% + @theme-adjust-saturation;
+@syntax-mix-contrast:   66% + @theme-adjust-contrast;
+@syntax-mix-grey:       33%;
 @syntax-mix-color:      10%;
 
-@very-light-gray: mix( hsl(@syntax-hue, @syntax-mix-saturation, @syntax-mix-contrast), #c5c8c6, @syntax-mix-grey);
-@light-gray:      mix( hsl(@syntax-hue, @syntax-mix-saturation, @syntax-mix-contrast), #969896, @syntax-mix-grey);
-@gray:            mix( hsl(@syntax-hue, @syntax-mix-saturation, @syntax-mix-contrast), #373b41, @syntax-mix-grey);
-@dark-gray:       mix( hsl(@syntax-hue, @syntax-mix-saturation, @syntax-mix-contrast), #282a2e, @syntax-mix-grey);
-@very-dark-gray:  mix( hsl(@syntax-hue, @syntax-mix-saturation, @syntax-mix-contrast), #1d1f21, @syntax-mix-grey);
+@very-light-gray: mix( hsl(@syntax-hue, @syntax-mix-saturation, @syntax-mix-contrast), hsl(0,0%,82%), @syntax-mix-grey);
+@light-gray:      mix( hsl(@syntax-hue, @syntax-mix-saturation, @syntax-mix-contrast), hsl(0,0%,66%), @syntax-mix-grey);
+@gray:            mix( hsl(@syntax-hue, @syntax-mix-saturation, @syntax-mix-contrast), hsl(0,0%,50%), @syntax-mix-grey);
+@dark-gray:       mix( hsl(@syntax-hue, @syntax-mix-saturation, @syntax-mix-contrast), hsl(0,0%,34%), @syntax-mix-grey);
+@very-dark-gray:  mix( hsl(@syntax-hue, @syntax-mix-saturation, @syntax-mix-contrast), hsl(0,0%,18%), @syntax-mix-grey);
 
 @cyan:            mix( hsl(@syntax-hue, @syntax-mix-saturation, @syntax-mix-contrast), #8abeb7, @syntax-mix-color);
 @blue:            mix( hsl(@syntax-hue, @syntax-mix-saturation, @syntax-mix-contrast), #81a2be, @syntax-mix-color);
