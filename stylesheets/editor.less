@@ -1,14 +1,10 @@
 
 // Editor styles (background, gutter, guides)
 
-.editor-colors,
+atom-text-editor, // <- remove when Shadow DOM can't be disabled
 :host {
   background-color: @syntax-background-color;
   color: @syntax-text-color;
-}
-
-.editor,
-:host {
 
   .line.cursor-line {
     background-color: @syntax-cursor-line;
@@ -26,7 +22,6 @@
     background-color: @syntax-selection-color;
   }
 
-  .bracket-matcher:empty, // <- deprecated
   .bracket-matcher .region {
     border-bottom: 1px solid @syntax-cursor-color;
     box-sizing: border-box;
