@@ -29,7 +29,7 @@ hi = `function() {
 }`
 
 heredoc = """
-CoffeeScript subst test #{ 010 + 0xf / 0b10 + "nested string #{ /\n/ }"}
+CoffeeScript subst test #{ 0o010 + 0xf / 0b10 + "nested string #{ /\n/ }"}
 """
 
 ###
