@@ -199,6 +199,8 @@
   color: @syntax-text-color;
 }
 
+// Languages -------------------------------------------------
+
 .markup {
   &.bold {
     color: @orange;
@@ -253,5 +255,11 @@
 
   .link .entity {
     color: @blue;
+  }
+}
+
+.ruby {
+  &.symbol > .punctuation {
+    color: inherit;
   }
 }
