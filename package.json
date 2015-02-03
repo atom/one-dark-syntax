@@ -1,7 +1,7 @@
 {
   "name": "one-dark-syntax",
   "theme": "syntax",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A dark syntax theme",
   "repository": "https://github.com/atom/one-dark-syntax",
   "license": "MIT",
