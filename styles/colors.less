@@ -1,7 +1,7 @@
 
 // Settings -----------------------------------
 
-@theme-color:             hsl(40, 100%, 50%);
+@theme-color:             hsl(220, 100%, 50%);
 @theme-adjust-saturation: 0%; // -/+n%
 @theme-adjust-contrast:   0%;
 
@@ -9,7 +9,7 @@
 // Config -----------------------------------
 
 @syntax-hue:          hsvhue(@theme-color);
-@syntax-hue-accent:   @syntax-hue + 168;
+@syntax-hue-accent:   @syntax-hue;
 @syntax-saturation:   max(2% + @theme-adjust-saturation, 0% ); // limit to > 100%;
 @syntax-brightness:   98%;
 @syntax-contrast:     @theme-adjust-contrast * -0.1;
