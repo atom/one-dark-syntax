@@ -1,6 +1,6 @@
 ## ONE dark Syntax theme
 
-![one-syntax-dark](https://cloud.githubusercontent.com/assets/378023/5795461/f8d0deda-9fd3-11e4-94d3-be982bd83edd.png)
+![one-dark-syntax](https://cloud.githubusercontent.com/assets/378023/6182189/1621e0f8-b382-11e4-9a3d-9c74f4869096.png)
 
 There is also a matching [UI theme](https://atom.io/themes/one-dark-ui).
 
