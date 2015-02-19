@@ -1,34 +1,19 @@
 
-// Settings -----------------------------------
-
-@theme-color:             hsl(220, 100%, 50%);
-@theme-adjust-saturation: 0%; // -/+n%
-@theme-adjust-contrast:   0%;
-
-
 // Config -----------------------------------
-
-@syntax-hue:          hsvhue(@theme-color);
-@syntax-hue-accent:   @syntax-hue;
-@syntax-saturation:   max(2% + @theme-adjust-saturation, 0% ); // limit to > 100%;
+@syntax-hue:          220;
+@syntax-saturation:   0.1%;
 @syntax-brightness:   98%;
-@syntax-contrast:     @theme-adjust-contrast * -0.1;
-
 
 // Base colors -----------------------------------
-
-@syntax-accent-color: hsl(@syntax-hue-accent, @theme-adjust-saturation + 90%, (@syntax-brightness + (@syntax-contrast*10) - 40%) );
-@syntax-base-color:   hsl(@syntax-hue, @syntax-saturation, @syntax-brightness + (@syntax-contrast*-2) );
-
-@syntax-text:         @dark-gray;
-@syntax-guide-color:  fade(@syntax-text, 40%);
-
+@syntax-base-accent-color:      hsl(@syntax-hue, 100%, 66% );
+@syntax-base-background-color:  hsv(@syntax-hue, @syntax-saturation, @syntax-brightness);
+@syntax-base-text-color:        @dark-gray;
+@syntax-base-guide-color:       fade(@syntax-base-text-color, 40%);
 
 
 // Colors: Mix Base16 Atelier Dune with Theme hue -----------------------------------
-
-@syntax-mix-saturation: 0% + @theme-adjust-saturation;
-@syntax-mix-contrast:   10% + (@theme-adjust-contrast * .5 );
+@syntax-mix-saturation: 2%;
+@syntax-mix-contrast:   6%;
 
 // Grayscale
 @black:           darken( #20201d, @syntax-mix-contrast ); // 00

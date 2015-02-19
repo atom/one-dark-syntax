@@ -1,42 +1,36 @@
 @import "colors";
 
-// Syntax Variables for Atom Theme: One Light
+// Custom Syntax Variables -----------------------------------
 
+@syntax-cursor-line: hsla(@syntax-hue, 33%,  33%, .07); // needs to be semi-transparent to show serach results
 @syntax-bracket-matcher-background-color: darken(@syntax-background-color, 6%);
 
 
-// This defines all syntax variables that syntax themes must implement when they
-// include a syntax-variables.less file.
+// Official Syntax Variables -----------------------------------
 
-// General colors -----------------------------------
-
-@syntax-text-color:            @syntax-text;
-@syntax-cursor-color:          @syntax-accent-color;
+// General colors
+@syntax-text-color:            @syntax-base-text-color;
+@syntax-cursor-color:          @syntax-base-accent-color;
 @syntax-selection-color:       darken(@syntax-background-color, 8%);
-@syntax-selection-flash-color: @syntax-accent-color;
-@syntax-background-color:      darken(@syntax-base-color, (@syntax-contrast * 0.7) );
+@syntax-selection-flash-color: @syntax-base-accent-color;
+@syntax-background-color:      @syntax-base-background-color;
 
 // Guide colors
-@syntax-wrap-guide-color:          @syntax-guide-color;
-@syntax-indent-guide-color:        @syntax-guide-color;
-@syntax-invisible-character-color: @syntax-guide-color;
-@syntax-cursor-line:               hsla(@syntax-hue, 33%,  33%, .07); // needs to be semi-transparent to show serach results
+@syntax-wrap-guide-color:          @syntax-base-guide-color;
+@syntax-indent-guide-color:        @syntax-base-guide-color;
+@syntax-invisible-character-color: @syntax-base-guide-color;
 
 // For find and replace markers
 @syntax-result-marker-color: @syntax-text-color;
-@syntax-result-marker-color-selected: @syntax-accent-color;
-
+@syntax-result-marker-color-selected: @syntax-base-accent-color;
 
 // Gutter colors -----------------------------------
-
-@syntax-gutter-text-color:          hsl(@syntax-hue, @syntax-saturation/2, -36% + @syntax-brightness + @syntax-contrast);
-@syntax-gutter-text-color-selected: hsl(@syntax-hue, @syntax-saturation*2, -56% + @syntax-brightness + @syntax-contrast);
-@syntax-gutter-background-color: transparent;
+@syntax-gutter-text-color: lighten(@syntax-text-color, 26%);
+@syntax-gutter-text-color-selected: @syntax-text-color;
+@syntax-gutter-background-color: @syntax-background-color; // unused
 @syntax-gutter-background-color-selected: darken(@syntax-background-color, 4%);
 
-
-// Git colors -----------------------------------
-// For git diff info. i.e. in the gutter
+// Git colors - For git diff info. i.e. in the gutter
 @syntax-color-renamed:  hsl(208, 100%, 66%);
 @syntax-color-added:    hsl(132,  60%, 44%);
 @syntax-color-modified: hsl( 40,  90%, 50%);
