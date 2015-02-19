@@ -1,42 +1,36 @@
 @import "colors";
 
-// Syntax Variables for Atom Theme: One Dark
+// Custom Syntax Variables -----------------------------------
 
+@syntax-cursor-line: hsla(@syntax-hue, 100%,  80%, .04); // needs to be semi-transparent to show serach results
 @syntax-bracket-matcher-background-color: lighten(@syntax-background-color, 6%);
 
 
-// This defines all syntax variables that syntax themes must implement when they
-// include a syntax-variables.less file.
+// Official Syntax Variables -----------------------------------
 
-// General colors -----------------------------------
-
-@syntax-text-color:            @syntax-text;
-@syntax-cursor-color:          @syntax-accent-color;
+// General colors
+@syntax-text-color:            @syntax-base-text-color;
+@syntax-cursor-color:          @syntax-base-accent-color;
 @syntax-selection-color:       lighten(@syntax-background-color, 10%);
-@syntax-selection-flash-color: @syntax-accent-color;
-@syntax-background-color:      darken(@syntax-base-color, @syntax-contrast);
+@syntax-selection-flash-color: @syntax-base-accent-color;
+@syntax-background-color:      @syntax-base-background-color;
 
 // Guide colors
-@syntax-wrap-guide-color:          @syntax-guide-color;
-@syntax-indent-guide-color:        @syntax-guide-color;
-@syntax-invisible-character-color: @syntax-guide-color;
-@syntax-cursor-line:               hsla(@syntax-hue, 100%,  80%, .04); // needs to be semi-transparent to show serach results
+@syntax-wrap-guide-color:          @syntax-base-guide-color;
+@syntax-indent-guide-color:        @syntax-base-guide-color;
+@syntax-invisible-character-color: @syntax-base-guide-color;
 
 // For find and replace markers
 @syntax-result-marker-color: @syntax-text-color;
-@syntax-result-marker-color-selected: @syntax-accent-color;
+@syntax-result-marker-color-selected: @syntax-base-accent-color;
 
-
-// Gutter colors -----------------------------------
-
-@syntax-gutter-text-color: hsl(@syntax-hue, @syntax-saturation/8, 16% + @syntax-brightness + @syntax-contrast);
+// Gutter colors
+@syntax-gutter-text-color: darken(@syntax-text-color, 26%);
 @syntax-gutter-text-color-selected: @syntax-text-color;
-@syntax-gutter-background-color: darken(@syntax-background-color, 1%);
+@syntax-gutter-background-color: @syntax-background-color; // unused
 @syntax-gutter-background-color-selected: lighten(@syntax-background-color, 2%);
 
-
-// Git colors -----------------------------------
-// For git diff info. i.e. in the gutter
+// Git colors - For git diff info. i.e. in the gutter
 @syntax-color-renamed:  hsl(208, 100%, 60%);
 @syntax-color-added:    hsl(150,  60%, 54%);
 @syntax-color-modified: hsl(40,   60%, 70%);
