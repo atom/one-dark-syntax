@@ -1,48 +1,33 @@
 
-// Settings -----------------------------------
-
-@theme-color:             hsl(220, 100%, 50%);
-@theme-adjust-saturation: 0%; // -/+n%
-@theme-adjust-contrast:   0%;
-
-
 // Config -----------------------------------
-
-@syntax-hue:          hsvhue(@theme-color);
-@syntax-hue-accent:   @syntax-hue + 176;
-@syntax-saturation:   max(20% + @theme-adjust-saturation, 0%); // limit to > 0%
+@syntax-hue:          220;
+@syntax-saturation:   24%;
 @syntax-brightness:   20%;
-@syntax-contrast:     @theme-adjust-contrast * 0.1;
-
 
 // Base colors -----------------------------------
-
-@syntax-accent-color: hsl(@syntax-hue, @theme-adjust-saturation + 90%, (@syntax-brightness + (@syntax-contrast*10) + 40%) );
-@syntax-base-color:   hsv(@syntax-hue, @syntax-saturation, @syntax-brightness);
-@syntax-text:         @light-gray;
-@syntax-guide-color:  fade(@syntax-text, 15%);
-
+@syntax-base-accent-color:      hsl(@syntax-hue, 100%, 66% );
+@syntax-base-background-color:  hsv(@syntax-hue, @syntax-saturation, @syntax-brightness);
+@syntax-base-text-color:        @light-gray;
+@syntax-base-guide-color:       fade(@syntax-base-text-color, 15%);
 
 
 // Colors: Mix Base16 Tomorrow with Theme hue -----------------------------------
+@syntax-mix-base:       hsl(@syntax-hue, 100%, 66%);
+@syntax-mix-grey:       12%;
+@syntax-mix-color:      0%;
 
-@syntax-mix-saturation: 66% + @theme-adjust-saturation;
-@syntax-mix-contrast:   66% + @theme-adjust-contrast;
-@syntax-mix-grey:       33%;
-@syntax-mix-color:      10%;
+@very-light-gray: mix( @syntax-mix-base, hsl(0,0%,84%), @syntax-mix-grey);
+@light-gray:      mix( @syntax-mix-base, hsl(0,0%,72%), @syntax-mix-grey);
+@gray:            mix( @syntax-mix-base, hsl(0,0%,54%), @syntax-mix-grey);
+@dark-gray:       mix( @syntax-mix-base, hsl(0,0%,36%), @syntax-mix-grey);
+@very-dark-gray:  mix( @syntax-mix-base, hsl(0,0%,18%), @syntax-mix-grey);
 
-@very-light-gray: mix( hsl(@syntax-hue, @syntax-mix-saturation, @syntax-mix-contrast), hsl(0,0%,82%), @syntax-mix-grey);
-@light-gray:      mix( hsl(@syntax-hue, @syntax-mix-saturation, @syntax-mix-contrast), hsl(0,0%,66%), @syntax-mix-grey);
-@gray:            mix( hsl(@syntax-hue, @syntax-mix-saturation, @syntax-mix-contrast), hsl(0,0%,50%), @syntax-mix-grey);
-@dark-gray:       mix( hsl(@syntax-hue, @syntax-mix-saturation, @syntax-mix-contrast), hsl(0,0%,34%), @syntax-mix-grey);
-@very-dark-gray:  mix( hsl(@syntax-hue, @syntax-mix-saturation, @syntax-mix-contrast), hsl(0,0%,18%), @syntax-mix-grey);
-
-@cyan:            mix( hsl(@syntax-hue, @syntax-mix-saturation, @syntax-mix-contrast), #57B6C2, @syntax-mix-color);
-@blue:            mix( hsl(@syntax-hue, @syntax-mix-saturation, @syntax-mix-contrast), #65A7DF, @syntax-mix-color);
-@purple:          mix( hsl(@syntax-hue, @syntax-mix-saturation, @syntax-mix-contrast), #B97BCB, @syntax-mix-color);
-@green:           mix( hsl(@syntax-hue, @syntax-mix-saturation, @syntax-mix-contrast), #8BB66D, @syntax-mix-color);
-@red:             mix( hsl(@syntax-hue, @syntax-mix-saturation, @syntax-mix-contrast), #C86A71, @syntax-mix-color);
-@dark-red:        mix( hsl(@syntax-hue, @syntax-mix-saturation, @syntax-mix-contrast), #934C45, @syntax-mix-color);
-@orange:          mix( hsl(@syntax-hue, @syntax-mix-saturation, @syntax-mix-contrast), #DF9B59, @syntax-mix-color);
-@light-orange:    mix( hsl(@syntax-hue, @syntax-mix-saturation, @syntax-mix-contrast), #E5C17C, @syntax-mix-color);
-@bright-orange:   mix( hsl(@syntax-hue, @syntax-mix-saturation, @syntax-mix-contrast), #FF8000, @syntax-mix-color);
+@cyan:            mix( @syntax-mix-base, #57B6C2, @syntax-mix-color);
+@blue:            mix( @syntax-mix-base, #61AEEF, @syntax-mix-color);
+@purple:          mix( @syntax-mix-base, #C679DD, @syntax-mix-color);
+@green:           mix( @syntax-mix-base, #97C378, @syntax-mix-color);
+@red:             mix( @syntax-mix-base, #DF6A73, @syntax-mix-color);
+@dark-red:        mix( @syntax-mix-base, #BE4F44, @syntax-mix-color);
+@orange:          mix( @syntax-mix-base, #D29B67, @syntax-mix-color);
+@light-orange:    mix( @syntax-mix-base, #E5C17C, @syntax-mix-color);
+@bright-orange:   mix( @syntax-mix-base, #FF8000, @syntax-mix-color);
