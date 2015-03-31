@@ -26,6 +26,11 @@
 
   &.operator {
     color: @syntax-text-color;
+
+    // for C# language
+    &.source.cs {
+      color: @purple;
+    }
   }
 
   &.other.special-method {
@@ -39,10 +44,32 @@
 
 .storage {
   color: @purple;
+
+  &.type {
+    &.java {
+      color: @light-orange;
+    }
+
+    &.annotation,
+    &.primitive {
+      color: @purple;
+    }
+  }
+
+  &.modifier {
+    &.package,
+    &.import {
+      color: @syntax-text-color;
+    }
+  }
 }
 
 .constant {
   color: @orange;
+
+  &.variable {
+    color: @orange;
+  }
 
   &.character.escape {
     color: @cyan;
@@ -68,7 +95,7 @@
     color: @dark-red;
   }
 
-  &.parameter.function {
+  &.parameter {
     color: @syntax-text-color;
   }
 }
@@ -101,7 +128,11 @@
       color: @dark-gray;
     }
 
+    &.method-parameters,
+    &.function-parameters,
     &.parameters,
+    &.separator,
+    &.seperator,
     &.array {
       color: @syntax-text-color;
     }
@@ -122,8 +153,16 @@
     }
   }
 
-  &.section.embedded {
-    color: @dark-red;
+  &.section {
+    &.embedded {
+      color: @dark-red;
+    }
+
+    &.method,
+    &.class,
+    &.inner-class {
+      color: @syntax-text-color;
+    }
   }
 }
 
@@ -171,6 +210,21 @@
 .meta {
   &.class {
     color: @light-orange;
+
+    &.body {
+      color: @syntax-text-color;
+    }
+  }
+
+  &.method-call,
+  &.method {
+    color: @syntax-text-color;
+  }
+
+  &.definition {
+    &.variable {
+      color: @red;
+    }
   }
 
   &.link {
