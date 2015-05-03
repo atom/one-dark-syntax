@@ -1,4 +1,3 @@
-
 // Language syntax highlighting
 
 .comment {
@@ -26,11 +25,6 @@
 
   &.operator {
     color: @syntax-text-color;
-
-    // for C# language
-    &.source.cs {
-      color: @purple;
-    }
   }
 
   &.other.special-method {
@@ -46,10 +40,6 @@
   color: @purple;
 
   &.type {
-    &.java {
-      color: @light-orange;
-    }
-
     &.annotation,
     &.primitive {
       color: @purple;
@@ -181,12 +171,12 @@
 }
 
 .entity {
-
   &.name.function {
     color: @blue;
   }
 
-  &.name.class, &.name.type.class {
+  &.name.class,
+  &.name.type.class {
     color: @light-orange;
   }
 
@@ -292,28 +282,5 @@
 
   &.raw.inline {
     color: @green;
-  }
-}
-
-.source.gfm {
-  .markup {
-    -webkit-font-smoothing: auto;
-    &.heading {
-      color: @red;
-    }
-
-    &.link {
-      color: @purple;
-    }
-  }
-
-  .link .entity {
-    color: @blue;
-  }
-}
-
-.ruby {
-  &.symbol > .punctuation {
-    color: inherit;
   }
 }
