@@ -17,7 +17,7 @@
 }
 
 .keyword {
-  color: @purple;
+  color: @syntax-color-keyword;
 
   &.control {
     color: @purple;
@@ -28,7 +28,7 @@
   }
 
   &.other.special-method {
-    color: @blue;
+    color: @syntax-color-method;
   }
 
   &.other.unit {
@@ -41,7 +41,7 @@
 }
 
 .constant {
-  color: @orange;
+  color: @syntax-color-constant;
 
   &.character.escape {
     color: @cyan;
@@ -61,7 +61,7 @@
 }
 
 .variable {
-  color: @red;
+  color: @syntax-color-variable;
 
   &.interpolation {
     color: @dark-red;
@@ -123,25 +123,25 @@
 
 .support {
   &.class {
-    color: @light-orange;
+    color: @syntax-color-class;
   }
 
   &.function  {
     color: @cyan;
 
     &.any-method {
-      color: @blue;
+      color: @syntax-color-method;
     }
   }
 }
 
 .entity {
   &.name.function {
-    color: @blue;
+    color: @syntax-color-function;
   }
 
   &.name.class, &.name.type.class {
-    color: @light-orange;
+    color: @syntax-color-class;
   }
 
   &.name.section {
@@ -149,11 +149,11 @@
   }
 
   &.name.tag {
-    color: @red;
+    color: @syntax-color-tag;
   }
 
   &.other.attribute-name {
-    color: @orange;
+    color: @syntax-color-attribute;
 
     &.id {
       color: @blue;
@@ -163,7 +163,7 @@
 
 .meta {
   &.class {
-    color: @light-orange;
+    color: @syntax-color-class;
   }
 
   &.link {
