@@ -24,3 +24,11 @@ li[lang=ru] {
   color: #F0F0F0 !important;
   width: 100%;
 }
+
+
+/* Tests */
+
+.support-test {
+  background: blue; /* <- valid properties/values should be highlighted more */
+  invalid-property: invalid-color; /* <- invalid should be toned down */
+}
