@@ -1,6 +1,8 @@
-## ONE dark Syntax theme
+## One Dark Syntax theme
 
-![one-dark-syntax](https://cloud.githubusercontent.com/assets/378023/6182189/1621e0f8-b382-11e4-9a3d-9c74f4869096.png)
+![one-dark-syntax](https://cloud.githubusercontent.com/assets/378023/7783203/49271ef6-0174-11e5-8eb1-d80b8d34a0e3.png)
+
+> The font used in the screenshot is [Fira Mono](https://github.com/mozilla/Fira).
 
 There is also a matching [UI theme](https://atom.io/themes/one-dark-ui).
 

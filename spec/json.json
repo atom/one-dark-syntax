@@ -6,7 +6,19 @@
   },
   {
     "title": "oranges",
-    "count": [17500, null],
-    "description": {"text": "...", "sensitive": false}
+    "count": [17500, null, "String"],
+    "description": {"text": "She said, \"Hello\"", "sensitive": false}
+  },
+  {
+    "deeply_nested": {
+      "key": {
+        "key": {
+          "key": {
+            "array": [1, "two", null],
+            "string": "hello"
+          }
+        }
+      }
+    }
   }
 ]
