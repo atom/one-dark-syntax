@@ -17,9 +17,9 @@ public class Foo<T extends List> extends Bar<T> implements SomeInterface {
   private int myCount = 0;
 
   @Cool(reason="because")
-  public static staticMethod(String[] values, int n) {
+  public static int staticMethod(String[] values, int n) {
     try {
-      System.out.print(values[0]);
+      System.out.print("This is the value:\n" + values[0]);
     } catch (Exception e) {
       e.printStackTrace();
     }
@@ -65,7 +65,7 @@ public class Foo<T extends List> extends Bar<T> implements SomeInterface {
       public boolean isValid() {
         return false;
       }
-    }
+    };
   }
 
   public static interface MyFooInterface {
