@@ -198,6 +198,10 @@
 }
 
 .meta {
+  &.tag {
+    color: @mono-1;
+  }
+
   &.class {
     color: @hue-6-2;
 
@@ -205,7 +209,9 @@
       color: @mono-1;
     }
   }
-
+  &.id {
+    color: @hue-2;
+  }
   &.method-call,
   &.method {
     color: @mono-1;
@@ -231,10 +237,6 @@
 
   &.separator {
     background-color: #373b41;
-    color: @mono-1;
-  }
-
-  &.tag {
     color: @mono-1;
   }
 }
