@@ -1,11 +1,5 @@
 @import "colors";
 
-// Custom Syntax Variables -----------------------------------
-
-@syntax-cursor-line: hsla(@syntax-hue, 100%,  80%, .04); // needs to be semi-transparent to show serach results
-@syntax-bracket-matcher-background-color: lighten(@syntax-background-color, 6%);
-
-
 // Official Syntax Variables -----------------------------------
 
 // General colors
@@ -49,3 +43,15 @@
 @syntax-color-attribute:  @hue-6;
 @syntax-color-import:     @hue-3;
 @syntax-color-snippet:    @hue-4;
+
+
+// Custom Syntax Variables -----------------------------------
+// Don't use in packages
+
+@syntax-cursor-line: hsla(@syntax-hue, 100%,  80%, .04); // needs to be semi-transparent to show serach results
+@syntax-bracket-matcher-background-color: lighten(@syntax-background-color, 6%);
+
+@syntax-deprecated-fg: darken(@syntax-color-modified, 50%);
+@syntax-deprecated-bg: @syntax-color-modified;
+@syntax-illegal-fg:    white;
+@syntax-illegal-bg:    @syntax-color-removed;

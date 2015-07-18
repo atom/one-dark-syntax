@@ -90,11 +90,6 @@
   }
 }
 
-.invalid.illegal {
-  background-color: @hue-5;
-  color: @syntax-background-color;
-}
-
 .string {
   color: @hue-4;
 
@@ -245,6 +240,17 @@
 
 .none {
   color: @mono-1;
+}
+
+.invalid {
+  &.deprecated {
+    color: @syntax-deprecated-fg !important;
+    background-color: @syntax-deprecated-bg !important;
+  }
+  &.illegal {
+    color: @syntax-illegal-fg !important;
+    background-color: @syntax-illegal-bg !important;
+  }
 }
 
 // Languages -------------------------------------------------
