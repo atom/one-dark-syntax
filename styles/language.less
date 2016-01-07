@@ -3,8 +3,12 @@
 .comment {
   color: @mono-3;
   font-style: italic;
-  &:not(.documentation) .markup.link {
+
+  .markup.link.link {
     color: @mono-3;
+  }
+  &.documentation .markup.link {
+    color: @mono-2;
   }
 }
 
