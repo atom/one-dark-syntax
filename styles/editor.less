@@ -39,6 +39,21 @@ atom-text-editor, // <- remove when Shadow DOM can't be disabled
     background-color: @syntax-wrap-guide-color;
   }
 
+  // find + replace
+  .find-result .region.region.region,
+  .current-result .region.region.region {
+    border-radius: 0px;
+    background-color: @syntax-result-marker-color;
+    transition: border-color .4s;
+  }
+  .find-result .region.region.region {
+    border: 2px solid transparent;
+  }
+  .current-result .region.region.region {
+    border: 2px solid @syntax-result-marker-color-selected;
+    transition-duration: .1s;
+  }
+
   .gutter {
 
     .line-number {
