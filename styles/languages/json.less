@@ -1,20 +1,20 @@
-.source.json {
-  .meta.structure.dictionary.json {
-    & > .string.quoted.json {
-      & > .punctuation.string {
+.syntax--source.syntax--json {
+  .syntax--meta.syntax--structure.syntax--dictionary.syntax--json {
+    & > .syntax--string.syntax--quoted.syntax--json {
+      & > .syntax--punctuation.syntax--string {
         color: @hue-5;
       }
       color: @hue-5;
     }
   }
 
-  .meta.structure.dictionary.json, .meta.structure.array.json {
-    & > .value.json > .string.quoted.json,
-    & > .value.json > .string.quoted.json > .punctuation {
+  .syntax--meta.syntax--structure.syntax--dictionary.syntax--json, .syntax--meta.syntax--structure.syntax--array.syntax--json {
+    & > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json,
+    & > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation {
       color: @hue-4;
     }
 
-    & > .constant.language.json {
+    & > .syntax--constant.syntax--language.syntax--json {
       color: @hue-1;
     }
   }
