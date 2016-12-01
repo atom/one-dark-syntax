@@ -94,3 +94,21 @@ atom-text-editor {
     color: @syntax-gutter-text-color-selected;
   }
 }
+
+
+// Packages -----------------------------------
+
+atom-text-editor {
+
+  // highlight-selected
+  .highlight-selected .region.region.region {
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid @syntax-result-marker-color-selected;
+  }
+  [class="highlight highlight-selected background"] .region.region.region, // TODO: <- Remove when fixed in Core, currently background -> syntax--background
+  .highlight-selected.background .region.region {
+    background-color: @syntax-result-marker-color;
+  }
+
+}
