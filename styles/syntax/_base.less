@@ -21,10 +21,10 @@
 }
 
 .syntax--keyword {
-  color: @hue-3;
+  color: @syntax-color-keyword;
 
   &.syntax--control {
-    color: @hue-3;
+    color: @syntax-color-keyword;
   }
 
   &.syntax--operator {
@@ -32,7 +32,7 @@
   }
 
   &.syntax--other.syntax--special-method {
-    color: @hue-2;
+    color: @syntax-color-method;
   }
 
   &.syntax--other.syntax--unit {
@@ -59,10 +59,10 @@
 }
 
 .syntax--constant {
-  color: @hue-6;
+  color: @syntax-color-constant;
 
   &.syntax--variable {
-    color: @hue-6;
+    color: @syntax-color-constant;
   }
 
   &.syntax--character.syntax--escape {
@@ -70,7 +70,7 @@
   }
 
   &.syntax--numeric {
-    color: @hue-6;
+    color: @syntax-color-constant;
   }
 
   &.syntax--other.syntax--color {
@@ -83,7 +83,7 @@
 }
 
 .syntax--variable {
-  color: @hue-5;
+  color: @syntax-color-variable;
 
   &.syntax--interpolation {
     color: @hue-5-2;
@@ -156,30 +156,30 @@
 
 .syntax--support {
   &.syntax--class {
-    color: @hue-6-2;
+    color: @syntax-color-class;
   }
 
   &.syntax--type {
     color: @hue-1;
   }
 
-  &.syntax--function  {
+  &.syntax--function {
     color: @hue-1;
 
     &.syntax--any-method {
-      color: @hue-2;
+      color: @syntax-color-method;
     }
   }
 }
 
 .syntax--entity {
   &.syntax--name.syntax--function {
-    color: @hue-2;
+    color: @syntax-color-function;
   }
 
   &.syntax--name.syntax--class,
   &.syntax--name.syntax--type.syntax--class {
-    color: @hue-6-2;
+    color: @syntax-color-class;
   }
 
   &.syntax--name.syntax--section {
@@ -187,11 +187,11 @@
   }
 
   &.syntax--name.syntax--tag {
-    color: @hue-5;
+    color: @syntax-color-tag;
   }
 
   &.syntax--other.syntax--attribute-name {
-    color: @hue-6;
+    color: @syntax-color-attribute;
 
     &.syntax--id {
       color: @hue-2;
@@ -201,7 +201,7 @@
 
 .syntax--meta {
   &.syntax--class {
-    color: @hue-6-2;
+    color: @syntax-color-class;
 
     &.syntax--body {
       color: @mono-1;
@@ -215,7 +215,7 @@
 
   &.syntax--definition {
     &.syntax--variable {
-      color: @hue-5;
+      color: @syntax-color-variable;
     }
   }
 
