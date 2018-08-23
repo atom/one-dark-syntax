@@ -1,21 +1,40 @@
 .syntax--source.syntax--json {
-  .syntax--meta.syntax--structure.syntax--dictionary.syntax--json {
-    & > .syntax--string.syntax--quoted.syntax--json {
-      & > .syntax--punctuation.syntax--string {
-        color: @hue-5;
-      }
-      color: @hue-5;
-    }
+
+  .syntax--string {
+    color: inherit; 
   }
 
-  .syntax--meta.syntax--structure.syntax--dictionary.syntax--json, .syntax--meta.syntax--structure.syntax--array.syntax--json {
-    & > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json,
-    & > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation {
-      color: @hue-4;
-    }
+  .syntax--key {
+    color: @mono-1;
 
-    & > .syntax--constant.syntax--language.syntax--json {
-      color: @hue-1;
+    // highlight different indent levels
+    // only works when indent guides are enabled
+    &:nth-child(2) {
+      color: @hue-5; // red
+    }
+    &:nth-child(3) {
+      color: @hue-3; // purple
+    }
+    &:nth-child(4) {
+      color: @hue-6-2; // yellow
+    }
+    &:nth-child(5) {
+      color: @hue-2; // blue
+    }
+    &:nth-child(6) {
+      color: @hue-6; // orange
+    }
+    &:nth-child(7) {
+      color: @hue-1; // cyan
     }
   }
+  
+  .syntax--value {
+    color: @hue-4;
+  }
+
+  .syntax--punctuation {
+    color: @mono-2;
+  }
+
 }
